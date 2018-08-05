@@ -25,7 +25,7 @@ namespace WinControlSample
     /// The child form.
     /// <para>Дочерняя форма</para>
     /// </summary>
-    public partial class FrmChild : Form, IWinControllable
+    public partial class FrmChild : Form, IChildForm
     {
         private string saveComplete;
 
@@ -36,20 +36,18 @@ namespace WinControlSample
             saveComplete = "";
         }
 
-        #region IWinControllable Members
-
-        public WinInfo WinInfo { get; set; }
+        #region IChildForm Members
+        public ChildFormTag ChildFormTag { get; set; }
 
         public void Save()
         {
-            if (WinInfo != null && WinInfo.Modified)
+            if (ChildFormTag != null && ChildFormTag.Modified)
             {
-                WinInfo.Modified = false;
+                ChildFormTag.Modified = false;
                 MessageBox.Show(string.Format(saveComplete, "\"" + Text + "\""), Text, 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         #endregion
 
         public string CultureName { get; set; }
@@ -57,8 +55,8 @@ namespace WinControlSample
 
         private void SetModified()
         {
-            if (WinInfo != null)
-                WinInfo.Modified = true;
+            if (ChildFormTag != null)
+                ChildFormTag.Modified = true;
         }
 
 

@@ -199,17 +199,9 @@ namespace WinControlSample
 
                     if (form != null)
                     {
-                        IWinControllable itfWin = form as IWinControllable;
-                        if (itfWin != null)
-                        {
-                            itfWin.WinInfo = new WinInfo();
-                            itfWin.WinInfo.TreeNode = node;
-                        }
-
                         form.FormClosed += new FormClosedEventHandler(ChildFormClosed);
                         nodeInfo.Form = form;
-
-                        winControl.AddForm(form, "", ilTree.Images["table.gif"]);
+                        winControl.AddForm(form, "", ilTree.Images["table.gif"], node);
                     }
                 }
                 else
@@ -228,8 +220,8 @@ namespace WinControlSample
         {
             // removes the link to the form associated with a tree node
             // очистка ссылки на форму, связанную с узлом дерева
-            IWinControllable itfWin = sender as IWinControllable;
-            TreeNode treeNode = itfWin == null || itfWin.WinInfo == null ? null : itfWin.WinInfo.TreeNode;
+            IChildForm itfWin = sender as IChildForm;
+            TreeNode treeNode = itfWin == null || itfWin.ChildFormTag == null ? null : itfWin.ChildFormTag.TreeNode;
             if (treeNode == null)
             {
                 foreach (TreeNode node in allNodes)

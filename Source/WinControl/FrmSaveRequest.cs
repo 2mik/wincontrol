@@ -36,7 +36,7 @@ namespace WinControl
         /// Gets or sets the saved items list.
         /// <para>Получить или установить список сохраняемых элементов.</para>
         /// </summary>
-        public List<IWinControllable> SavedItems { get; set; }
+        public List<IChildForm> SavedItems { get; set; }
 
         private void FrmSaveRequest_Shown(object sender, EventArgs e)
         {
@@ -45,8 +45,8 @@ namespace WinControl
             if (SavedItems != null)
             {
                 clbTabPages.Items.Clear();
-                foreach (IWinControllable item in SavedItems)
-                    try { clbTabPages.Items.Add(item.WinInfo.Title, true); }
+                foreach (IChildForm item in SavedItems)
+                    try { clbTabPages.Items.Add(item.ChildFormTag.Title, true); }
                     catch { }
             }
         }

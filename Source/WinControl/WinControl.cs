@@ -1,9 +1,4 @@
-﻿/*
- * Developer:
- * 2010, 2018, Mikhail Shiryaev
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -17,6 +12,9 @@ namespace WinControl
     /// Represents a control that contains multiple forms that share the same space on the screen.
     /// <para>Элемент управления, содержащий набор форм, которые используют общее пространство на экране.</para>
     /// </summary>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010, 2018
+    /// </remarks>
     public partial class WinControl : UserControl
     {
         /// <summary>
@@ -621,15 +619,14 @@ namespace WinControl
         /// Processes event that raised when a child form's the Modified property value changes.
         /// <para>Обработать событие при изменении свойства Modified дочерней формы.</para>
         /// </summary>
-        private void ChildFormModifiedChanged(object sender, EventArgs e)
+        private void ChildFormTagModifiedChanged(object sender, EventArgs e)
         {
             // displays "*" on the tab if the form's data changed
             // отображение "*" на панели закаладки при изменении данных
-            WinInfo winInfo = sender as WinInfo;
-            if (winInfo != null)
+            if (sender is ChildFormTag childFormTag)
             {
-                winInfo.TabPanel.Text = winInfo.TabPanel.Text.TrimEnd('*') + (winInfo.Modified ? "*" : "");
-                winInfo.TabPanel.Invalidate();
+                childFormTag.TabPanel.Text = childFormTag.Title + (childFormTag.Modified ? "*" : "");
+                childFormTag.TabPanel.Invalidate();
             }
         }
 
@@ -637,7 +634,7 @@ namespace WinControl
         /// Shows the save request form.
         /// <para>Показать форму запроса на сохранение данных.</para>
         /// </summary>
-        private void ShowSaveRequest(List<IWinControllable> savedItems, out bool cancel)
+        private void ShowSaveRequest(List<IChildForm> savedItems, out bool cancel)
         {
             FrmSaveRequest frmSaveRequest = new FrmSaveRequest();
             frmSaveRequest.Text = SaveReqCaption;
@@ -653,7 +650,7 @@ namespace WinControl
                 switch (frmSaveRequest.ShowDialog())
                 {
                     case DialogResult.Yes:
-                        foreach (IWinControllable item in frmSaveRequest.SavedItems)
+                        foreach (IChildForm item in frmSaveRequest.SavedItems)
                         {
                             try
                             {
@@ -697,7 +694,7 @@ namespace WinControl
         /// Adds a form to the control.
         /// <para>Добавить форму.</para>
         /// </summary>
-        public void AddForm(Form form, string hint, Image image)
+        public void AddForm(Form form, string hint, Image image, TreeNode treeNode)
         {
             // tests the form for duplicating
             // проверка дублирования формы
@@ -719,11 +716,13 @@ namespace WinControl
 
             // creates the tab's panel
             // создание панели закладки
-            Panel pnlNewTab = new Panel();
-            pnlNewTab.Margin = new Padding(3, 3, 0, 0);
-            pnlNewTab.Size = new Size((int)sizeF.Width + 14, 17);
-            pnlNewTab.Text = text;
-            pnlNewTab.AllowDrop = true;
+            Panel pnlNewTab = new Panel()
+            {
+                Margin = new Padding(3, 3, 0, 0),
+                Size = new Size((int)sizeF.Width + 14, 17),
+                Text = text,
+                AllowDrop = true,
+            };
             pnlNewTab.Paint += new PaintEventHandler(pnlTab_Paint);
             pnlNewTab.MouseDown += new MouseEventHandler(pnlTab_MouseDown);
             pnlNewTab.GiveFeedback += new GiveFeedbackEventHandler(pnlTab_GiveFeedback);
@@ -734,10 +733,12 @@ namespace WinControl
 
             // creates the tab page
             // создание страницы с закладкой
-            TabPage tabPage = new TabPage();
-            tabPage.TabPanel = pnlNewTab;
-            tabPage.ChildForm = form;
-            tabPage.Image = image;
+            TabPage tabPage = new TabPage()
+            {
+                TabPanel = pnlNewTab,
+                ChildForm = form,
+                Image = image
+            };
             tabPageList.Insert(0, tabPage);
             pnlNewTab.Tag = tabPage;
             selectedTab = tabPage;
@@ -762,13 +763,15 @@ namespace WinControl
             {
                 // sets up the form
                 // настройка формы
-                IWinControllable itfWin = form as IWinControllable;
-                if (itfWin != null)
+                if (form is IChildForm childForm)
                 {
-                    if (itfWin.WinInfo == null)
-                        itfWin.WinInfo = new WinInfo();
-                    itfWin.WinInfo.TabPanel = pnlNewTab;
-                    itfWin.WinInfo.ModifiedChanged += new EventHandler(ChildFormModifiedChanged);
+                    childForm.ChildFormTag = new ChildFormTag()
+                    {
+                        Title = form.Text,
+                        TreeNode = treeNode,
+                        TabPanel = pnlNewTab,
+                    };
+                    childForm.ChildFormTag.ModifiedChanged += ChildFormTagModifiedChanged;
                 }
 
                 // shows the form
@@ -796,10 +799,10 @@ namespace WinControl
         {
             // shows the save request form if the changes are not saved
             // отображение формы запроса на сохранение данных, если изменения не сохранены
-            IWinControllable itfWin = form as IWinControllable;
-            if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
+            IChildForm itfWin = form as IChildForm;
+            if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
             {
-                List<IWinControllable> savedItems = new List<IWinControllable>();
+                List<IChildForm> savedItems = new List<IChildForm>();
                 savedItems.Add(itfWin);
                 ShowSaveRequest(savedItems, out cancel);
             }
@@ -823,11 +826,11 @@ namespace WinControl
         {
             // fills the list of the items for saving
             // заполнение списка сохраняемых элементов
-            List<IWinControllable> savedItems = new List<IWinControllable>();
+            List<IChildForm> savedItems = new List<IChildForm>();
             foreach (TabPage tabPage in tabPageList)
             {
-                IWinControllable itfWin = tabPage.ChildForm as IWinControllable;
-                if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
+                IChildForm itfWin = tabPage.ChildForm as IChildForm;
+                if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
                     savedItems.Add(itfWin);
             }
 
@@ -849,13 +852,13 @@ namespace WinControl
         {
             // fills the list of the items for saving
             // заполнение списка сохраняемых элементов
-            List<IWinControllable> savedItems = new List<IWinControllable>();
+            List<IChildForm> savedItems = new List<IChildForm>();
             foreach (TabPage tabPage in tabPageList)
             {
                 if (tabPage != selectedTab)
                 {
-                    IWinControllable itfWin = tabPage.ChildForm as IWinControllable;
-                    if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
+                    IChildForm itfWin = tabPage.ChildForm as IChildForm;
+                    if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
                         savedItems.Add(itfWin);
                 }
             }
@@ -883,12 +886,12 @@ namespace WinControl
         /// </summary>
         public void ActivateForm(Form form)
         {
-            IWinControllable itfWin = form as IWinControllable;
-            WinInfo winInfo = itfWin == null ? null : itfWin.WinInfo;
+            IChildForm itfWin = form as IChildForm;
+            ChildFormTag winInfo = itfWin == null ? null : itfWin.ChildFormTag;
             if (winInfo == null)
                 SelectTabPage(FindTabPage(form));
             else
-                SelectTab(itfWin.WinInfo.TabPanel);
+                SelectTab(itfWin.ChildFormTag.TabPanel);
         }
 
         /// <summary>
@@ -1111,11 +1114,11 @@ namespace WinControl
             {
                 // shows the save request form if the changes are not saved
                 // отображение формы запроса на сохранение данных, если изменения не сохранены
-                IWinControllable itfWin = selectedTab.ChildForm as IWinControllable;
+                IChildForm itfWin = selectedTab.ChildForm as IChildForm;
                 bool cancel;
-                if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
+                if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
                 {
-                    List<IWinControllable> savedItems = new List<IWinControllable>();
+                    List<IChildForm> savedItems = new List<IChildForm>();
                     savedItems.Add(itfWin);
                     ShowSaveRequest(savedItems, out cancel);
                 }
