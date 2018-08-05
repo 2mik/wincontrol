@@ -3,10 +3,6 @@
  * 2010, Ширяев Михаил
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace WinControl
 {
     /// <summary>

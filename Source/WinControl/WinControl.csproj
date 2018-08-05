@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFormClosedEventArgs.cs" />
     <Compile Include="FrmSaveRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,7 +58,7 @@
     <Compile Include="WinControl.designer.cs">
       <DependentUpon>WinControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinControllable.cs" />
+    <Compile Include="IWinControllable.cs" />
     <Compile Include="WinInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>

@@ -1,20 +1,15 @@
 ﻿/*
  * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Разработчик:
- * 2010, Ширяев Михаил
+ * 2010, 2018, Mikhail Shiryaev
  */
 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.Drawing.Design;
 using System.ComponentModel.Design;
+using System.Drawing;
+using System.Drawing.Design;
+using System.Windows.Forms;
 
 namespace WinControl
 {
@@ -36,10 +31,10 @@ namespace WinControl
             /// </summary>
             public Panel TabPanel { get; set; }
             /// <summary>
-            /// Gets or sets the form with the page content.
-            /// <para>Получить или установить форму с содержимым страницы</para>
+            /// Gets or sets the child form with the page content.
+            /// <para>Получить или установить дочернюю форму с содержимым страницы.</para>
             /// </summary>
-            public Form ContentForm { get; set; }
+            public Form ChildForm { get; set; }
             /// <summary>
             /// Gets or sets the page's image.
             /// <para>Получить или установить пиктограмму страницы.</para>
@@ -53,12 +48,17 @@ namespace WinControl
         /// </summary>
         public enum ColorScheme { Blue, Green, Gray }
 
+        /// <summary>
+        /// Version of the control.
+        /// <para>Версия элемента управления.</para>
+        /// </summary>
+        public const string Version = "1.0.1.0";
 
         private List<TabPage> tabPageList; // list of tab pages (список страниц)
         private TabPage selectedTab;       // selected tab page (выбранная страница)
         private bool formClosing;          // form is closing on one's own (форма закрывается самостоятельно)
 
-        // Objects for painting tabs and border
+        #region Objects for painting tabs and border
         // Объекты для отображения закладок и рамки страницы
         private Font tabFont;
         private Font tabSelectedFont;
@@ -75,6 +75,7 @@ namespace WinControl
         private Pen frameLightPen;
         private Pen tabFramePen;
         private Pen tabBackPen;
+        #endregion
 
 
         /// <summary>
@@ -118,7 +119,7 @@ namespace WinControl
         {
             get
             {
-                return selectedTab == null ? null : selectedTab.ContentForm;
+                return selectedTab == null ? null : selectedTab.ChildForm;
             }
         }
 
@@ -133,7 +134,7 @@ namespace WinControl
                 List<Form> forms = new List<Form>();
                 foreach (TabPage tabPage in tabPageList)
                 {
-                    Form form = tabPage.ContentForm;
+                    Form form = tabPage.ChildForm;
                     if (form != null)
                         forms.Add(form);
                 }
@@ -227,11 +228,11 @@ namespace WinControl
         }
 
         /// <summary>
-        /// Gets or sets the image displayed by the control when pages doesn't exists.
+        /// Gets or sets the image displayed by the control when pages don't exist.
         /// <para>Получить или установить рисунок, отображаемый элементом управления, когда страницы отсутствуют.</para>
         /// </summary>
         [Category("WinControl")]
-        [Description("The image displayed by the control when pages doesn't exists. Рисунок, отображаемый элементом управления, когда страницы отсутствуют.")]
+        [Description("The image displayed by the control when pages don't exist. Рисунок, отображаемый элементом управления, когда страницы отсутствуют.")]
         public Image Image
         {
             get
@@ -246,12 +247,12 @@ namespace WinControl
         }
 
         /// <summary>
-        /// Gets or sets the message text displayed by the control when pages doesn't exists.
+        /// Gets or sets the message text displayed by the control when pages don't exists.
         /// <para>Получить или установить текст сообщения, отображаемый элементом управления, когда страницы отсутствуют.</para>
         /// </summary>
         [Category("WinControl"), DefaultValue(""), Localizable(true)]
         [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-        [Description("The message text displayed by the control when pages doesn't exists. Текст сообщения, отображаемый элементом управления, когда страницы отсутствуют.")]
+        [Description("The message text displayed by the control when pages don't exists. Текст сообщения, отображаемый элементом управления, когда страницы отсутствуют.")]
         public string MessageText
         {
             get
@@ -453,7 +454,7 @@ namespace WinControl
             for (int i = 0; i < tabPageList.Count; i++)
             {
                 TabPage tabPage = tabPageList[i];
-                if (tabPage.ContentForm == form)
+                if (tabPage.ChildForm == form)
                     return tabPage;
             }
             return null;
@@ -468,7 +469,7 @@ namespace WinControl
             for (int i = 0; i < tabPageList.Count; i++)
             {
                 TabPage tabPage = tabPageList[i];
-                if (tabPage.ContentForm == form)
+                if (tabPage.ChildForm == form)
                 {
                     index = i;
                     return tabPage;
@@ -491,17 +492,17 @@ namespace WinControl
 
                 if (tabPage != selectedTab)
                 {
-                    // shows the selected content form
-                    // отображение формы с содержимым выбранной страницы
-                    if (tabPage.ContentForm != null)
-                        tabPage.ContentForm.Show();
+                    // shows the selected child form
+                    // отображение выбранной дочерней формы
+                    if (tabPage.ChildForm != null)
+                        tabPage.ChildForm.Show();
 
-                    // hides the content form that was selected
+                    // hides the child form that was selected
                     // hiding should occur after showing to decrease flickering
-                    // сокрытие формы с содержимым страницы, которая была выбрана ранее
+                    // сокрытие дочерней формы, которая была выбрана ранее
                     // сокрытие должно происходить после отображения, чтобы уменьшить мерцание
-                    if (selectedTab != null && selectedTab.ContentForm != null)
-                        selectedTab.ContentForm.Hide();
+                    if (selectedTab != null && selectedTab.ChildForm != null)
+                        selectedTab.ChildForm.Hide();
 
                     selectedTab = tabPage;
 
@@ -550,7 +551,7 @@ namespace WinControl
 
                 // closes the form and removes the tab page
                 // зарытие формы и удаление страницы
-                Form form = tabPage.ContentForm;
+                Form form = tabPage.ChildForm;
                 if (form != null && !formClosing)
                 {
                     form.FormClosing -= Form_FormClosing;
@@ -570,10 +571,10 @@ namespace WinControl
                     raiseEvent = true;
                 }
 
-                // shows the content form
-                // отображение формы с содержимым выбранной страницы
-                if (selectedTab != null && selectedTab.ContentForm != null)
-                    selectedTab.ContentForm.Show();
+                // shows the child form
+                // отображение дочерней формы
+                if (selectedTab != null && selectedTab.ChildForm != null)
+                    selectedTab.ChildForm.Show();
 
                 TuneTabPanels();
                 SetTabPanelsVisible();
@@ -595,7 +596,7 @@ namespace WinControl
             {
                 foreach (TabPage tabPage in tabPageList)
                 {
-                    Form form = tabPage.ContentForm;
+                    Form form = tabPage.ChildForm;
                     if (form != null)
                     {
                         form.FormClosing -= Form_FormClosing;
@@ -617,10 +618,10 @@ namespace WinControl
         }
 
         /// <summary>
-        /// Processes event that raised when a content form's the Modified property value changes.
-        /// <para>Обработать событие при изменении свойства Modified формы с содержимым страницы.</para>
+        /// Processes event that raised when a child form's the Modified property value changes.
+        /// <para>Обработать событие при изменении свойства Modified дочерней формы.</para>
         /// </summary>
-        private void ContentFormModifiedChanged(object sender, EventArgs e)
+        private void ChildFormModifiedChanged(object sender, EventArgs e)
         {
             // displays "*" on the tab if the form's data changed
             // отображение "*" на панели закаладки при изменении данных
@@ -679,8 +680,16 @@ namespace WinControl
         /// </summary>
         protected virtual void OnActiveFormChanged(EventArgs e)
         {
-            if (ActiveFormChanged != null)
-                ActiveFormChanged(this, e);
+            ActiveFormChanged?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// Raises the ChildFormClosed event.
+        /// <para>Вызвать событие ChildFormClosed.</para>
+        /// </summary>
+        protected virtual void OnChildFormClosed(ChildFormClosedEventArgs e)
+        {
+            ChildFormClosed?.Invoke(this, e);
         }
 
 
@@ -693,13 +702,13 @@ namespace WinControl
             // tests the form for duplicating
             // проверка дублирования формы
             foreach (TabPage tab in tabPageList)
-                if (tab.ContentForm != null && tab.ContentForm == form)
+                if (tab.ChildForm != null && tab.ChildForm == form)
                     throw new ArgumentException("The form is duplicated.");
 
-            // hides the content form that was selected
-            // сокрытие формы с содержимым страницы, которая была выбрана ранее
-            if (selectedTab != null && selectedTab.ContentForm != null)
-                selectedTab.ContentForm.Hide();
+            // hides the child form that was selected
+            // сокрытие дочерней формы, которая была выбрана ранее
+            if (selectedTab != null && selectedTab.ChildForm != null)
+                selectedTab.ChildForm.Hide();
 
             // measures the form's caption text length
             // измерение длины текста заголовка формы
@@ -727,7 +736,7 @@ namespace WinControl
             // создание страницы с закладкой
             TabPage tabPage = new TabPage();
             tabPage.TabPanel = pnlNewTab;
-            tabPage.ContentForm = form;
+            tabPage.ChildForm = form;
             tabPage.Image = image;
             tabPageList.Insert(0, tabPage);
             pnlNewTab.Tag = tabPage;
@@ -759,7 +768,7 @@ namespace WinControl
                     if (itfWin.WinInfo == null)
                         itfWin.WinInfo = new WinInfo();
                     itfWin.WinInfo.TabPanel = pnlNewTab;
-                    itfWin.WinInfo.ModifiedChanged += new EventHandler(ContentFormModifiedChanged);
+                    itfWin.WinInfo.ModifiedChanged += new EventHandler(ChildFormModifiedChanged);
                 }
 
                 // shows the form
@@ -770,6 +779,7 @@ namespace WinControl
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.TextChanged += Form_TextChanged;
                 form.FormClosing += Form_FormClosing;
+                form.FormClosed += Form_FormClosed;
                 form.Show();
             }
 
@@ -816,7 +826,7 @@ namespace WinControl
             List<IWinControllable> savedItems = new List<IWinControllable>();
             foreach (TabPage tabPage in tabPageList)
             {
-                IWinControllable itfWin = tabPage.ContentForm as IWinControllable;
+                IWinControllable itfWin = tabPage.ChildForm as IWinControllable;
                 if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
                     savedItems.Add(itfWin);
             }
@@ -844,7 +854,7 @@ namespace WinControl
             {
                 if (tabPage != selectedTab)
                 {
-                    IWinControllable itfWin = tabPage.ContentForm as IWinControllable;
+                    IWinControllable itfWin = tabPage.ChildForm as IWinControllable;
                     if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
                         savedItems.Add(itfWin);
                 }
@@ -917,8 +927,16 @@ namespace WinControl
         /// <para>Происходит, когда изменяется значение свойства ActiveForm.</para>
         /// </summary>
         [Category("WinControl")]
-        [Description("Occurs when the active form has changed. Происходит, когда изменяется значение свойства ActiveForm")]
+        [Description("Occurs when the active form has changed. Происходит, когда изменяется значение свойства ActiveForm.")]
         public event EventHandler ActiveFormChanged;
+
+        /// <summary>
+        /// Occurs when a child form is closed.
+        /// <para>Происходит, когда закрывается дочерняя форма.</para>
+        /// </summary>
+        [Category("WinControl")]
+        [Description("Occurs when a child form is closed. Происходит, когда закрывается дочерняя форма.")]
+        public event EventHandler<ChildFormClosedEventArgs> ChildFormClosed;
 
 
         private void WinControl_BackColorChanged(object sender, EventArgs e)
@@ -1074,7 +1092,7 @@ namespace WinControl
                 item.Image = tabPage.Image;
                 if (tabPage == selectedTab)
                     item.Font = new Font(item.Font, FontStyle.Bold);
-                item.Text = tabPage.ContentForm == null ? "null" : tabPage.ContentForm.Text;
+                item.Text = tabPage.ChildForm == null ? "null" : tabPage.ChildForm.Text;
                 item.Click += new EventHandler(miTab_Click);
 
                 contextTabs.Items.Add(item);
@@ -1093,7 +1111,7 @@ namespace WinControl
             {
                 // shows the save request form if the changes are not saved
                 // отображение формы запроса на сохранение данных, если изменения не сохранены
-                IWinControllable itfWin = selectedTab.ContentForm as IWinControllable;
+                IWinControllable itfWin = selectedTab.ChildForm as IWinControllable;
                 bool cancel;
                 if (itfWin != null && itfWin.WinInfo != null && itfWin.WinInfo.Modified)
                 {
@@ -1153,6 +1171,11 @@ namespace WinControl
             {
                 formClosing = false;
             }
+        }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            OnChildFormClosed(new ChildFormClosedEventArgs(e.CloseReason, (Form)sender));
         }
     }
 }
