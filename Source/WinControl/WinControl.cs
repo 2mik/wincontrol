@@ -799,23 +799,23 @@ namespace WinControl
         {
             // shows the save request form if the changes are not saved
             // отображение формы запроса на сохранение данных, если изменения не сохранены
-            IChildForm itfWin = form as IChildForm;
-            if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
+            if (form is IChildForm childForm && childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
             {
-                List<IChildForm> savedItems = new List<IChildForm>();
-                savedItems.Add(itfWin);
+                List<IChildForm> savedItems = new List<IChildForm>
+                {
+                    childForm
+                };
                 ShowSaveRequest(savedItems, out cancel);
             }
             else
+            {
                 cancel = false;
+            }
 
             // closes the tab page
             // закрытие страницы
             if (!cancel)
-            {
-                int index;
-                CloseTabPage(FindTabPage(form, out index), index);
-            }
+                CloseTabPage(FindTabPage(form, out int index), index);
         }
 
         /// <summary>
@@ -829,9 +829,11 @@ namespace WinControl
             List<IChildForm> savedItems = new List<IChildForm>();
             foreach (TabPage tabPage in tabPageList)
             {
-                IChildForm itfWin = tabPage.ChildForm as IChildForm;
-                if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
-                    savedItems.Add(itfWin);
+                if (tabPage.ChildForm is IChildForm childForm &&
+                    childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
+                {
+                    savedItems.Add(childForm);
+                }
             }
 
             // shows the save request form
@@ -857,9 +859,11 @@ namespace WinControl
             {
                 if (tabPage != selectedTab)
                 {
-                    IChildForm itfWin = tabPage.ChildForm as IChildForm;
-                    if (itfWin != null && itfWin.ChildFormTag != null && itfWin.ChildFormTag.Modified)
-                        savedItems.Add(itfWin);
+                    if (tabPage.ChildForm is IChildForm childForm &&
+                        childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
+                    {
+                        savedItems.Add(childForm);
+                    }
                 }
             }
 
@@ -886,12 +890,12 @@ namespace WinControl
         /// </summary>
         public void ActivateForm(Form form)
         {
-            IChildForm itfWin = form as IChildForm;
-            ChildFormTag winInfo = itfWin == null ? null : itfWin.ChildFormTag;
-            if (winInfo == null)
+            IChildForm childForm = form as IChildForm;
+            ChildFormTag childFormTag = childForm?.ChildFormTag;
+            if (childFormTag == null)
                 SelectTabPage(FindTabPage(form));
             else
-                SelectTab(itfWin.ChildFormTag.TabPanel);
+                SelectTab(childForm.ChildFormTag.TabPanel);
         }
 
         /// <summary>
