@@ -675,7 +675,7 @@ namespace WinControl
         /// Raises the ActiveFormChanged event.
         /// <para>Вызвать событие ActiveFormChanged.</para>
         /// </summary>
-        protected virtual void OnActiveFormChanged(EventArgs e)
+        protected void OnActiveFormChanged(EventArgs e)
         {
             ActiveFormChanged?.Invoke(this, e);
         }
@@ -684,9 +684,18 @@ namespace WinControl
         /// Raises the ChildFormClosed event.
         /// <para>Вызвать событие ChildFormClosed.</para>
         /// </summary>
-        protected virtual void OnChildFormClosed(ChildFormClosedEventArgs e)
+        protected void OnChildFormClosed(ChildFormClosedEventArgs e)
         {
             ChildFormClosed?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// Raises the ChildFormMessage event.
+        /// <para>Вызвать событие ChildFormMessage.</para>
+        /// </summary>
+        protected void OnChildFormMessage(FormMessageEventArgs e)
+        {
+            ChildFormMessage?.Invoke(this, e);
         }
 
 
@@ -944,6 +953,14 @@ namespace WinControl
         [Category("WinControl")]
         [Description("Occurs when a child form is closed. Происходит, когда закрывается дочерняя форма.")]
         public event EventHandler<ChildFormClosedEventArgs> ChildFormClosed;
+
+        /// <summary>
+        /// Occurs when a child form sends a message.
+        /// <para>Происходит, когда дочерняя форма отправляет сообщение.</para>
+        /// </summary>
+        [Category("WinControl")]
+        [Description("Occurs when a child form sends a message. Происходит, когда дочерняя форма отправляет сообщение.")]
+        public event EventHandler<FormMessageEventArgs> ChildFormMessage;
 
 
         private void WinControl_BackColorChanged(object sender, EventArgs e)

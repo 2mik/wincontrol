@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChildFormClosedEventArgs.cs" />
+    <Compile Include="FormMessageEventArgs.cs" />
     <Compile Include="FrmSaveRequest.cs">
       <SubType>Form</SubType>
     </Compile>
