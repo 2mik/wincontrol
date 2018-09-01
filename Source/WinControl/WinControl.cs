@@ -616,21 +616,6 @@ namespace WinControl
         }
 
         /// <summary>
-        /// Processes event that raised when a child form's the Modified property value changes.
-        /// <para>Обработать событие при изменении свойства Modified дочерней формы.</para>
-        /// </summary>
-        private void ChildFormTagModifiedChanged(object sender, EventArgs e)
-        {
-            // displays "*" on the tab if the form's data changed
-            // отображение "*" на панели закаладки при изменении данных
-            if (sender is ChildFormTag childFormTag)
-            {
-                childFormTag.TabPanel.Text = childFormTag.Title + (childFormTag.Modified ? "*" : "");
-                childFormTag.TabPanel.Invalidate();
-            }
-        }
-
-        /// <summary>
         /// Shows the save request form.
         /// <para>Показать форму запроса на сохранение данных.</para>
         /// </summary>
@@ -779,8 +764,10 @@ namespace WinControl
                         Title = form.Text,
                         TreeNode = treeNode,
                         TabPanel = pnlNewTab,
+                        ChildForm = form
                     };
-                    childForm.ChildFormTag.ModifiedChanged += ChildFormTagModifiedChanged;
+                    childForm.ChildFormTag.ModifiedChanged += ChildFormTag_ModifiedChanged;
+                    childForm.ChildFormTag.ChildFormMessage += ChildFormTag_ChildFormMessage;
                 }
 
                 // shows the form
@@ -1200,6 +1187,22 @@ namespace WinControl
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             OnChildFormClosed(new ChildFormClosedEventArgs(e.CloseReason, (Form)sender));
+        }
+
+        private void ChildFormTag_ModifiedChanged(object sender, EventArgs e)
+        {
+            // displays "*" on the tab if the form's data changed
+            // отображение "*" на панели закаладки при изменении данных
+            if (sender is ChildFormTag childFormTag)
+            {
+                childFormTag.TabPanel.Text = childFormTag.Title + (childFormTag.Modified ? "*" : "");
+                childFormTag.TabPanel.Invalidate();
+            }
+        }
+
+        private void ChildFormTag_ChildFormMessage(object sender, FormMessageEventArgs e)
+        {
+            OnChildFormMessage(e);
         }
     }
 }

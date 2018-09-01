@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace WinControl
@@ -62,13 +63,47 @@ namespace WinControl
         /// </summary>
         public Panel TabPanel { get; set; }
 
+        /// <summary>
+        /// Gets or sets the form that contains the tag.
+        /// </summary>
+        public Form ChildForm { get; set; }
+
 
         /// <summary>
         /// Raises the ModifiedChanged event.
         /// </summary>
-        protected virtual void OnModifiedChanged(EventArgs e)
+        protected void OnModifiedChanged(EventArgs e)
         {
             ModifiedChanged?.Invoke(this, e);
+        }
+        
+        /// <summary>
+        /// Raises the ChildFormMessage event.
+        /// </summary>
+        protected void OnChildFormMessage(FormMessageEventArgs e)
+        {
+            ChildFormMessage?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// Raises the MainFormMessage event.
+        /// </summary>
+        protected void OnMainFormMessage(FormMessageEventArgs e)
+        {
+            MainFormMessage?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// Sends the message from a child form to a main form or vice versa.
+        /// </summary>
+        public void SendMessage(Form source, string message, Dictionary<string, object> arguments = null)
+        {
+            FormMessageEventArgs eventArgs = new FormMessageEventArgs(source, message, arguments);
+
+            if (source == ChildForm)
+                OnChildFormMessage(eventArgs);
+            else
+                OnMainFormMessage(eventArgs);
         }
 
 
@@ -76,5 +111,15 @@ namespace WinControl
         /// Occurs when the Modified property changed.
         /// </summary>
         public event EventHandler ModifiedChanged;
+
+        /// <summary>
+        /// Occurs when a child form sends a message.
+        /// </summary>
+        public event EventHandler<FormMessageEventArgs> ChildFormMessage;
+
+        /// <summary>
+        /// Occurs when a main form sends a message.
+        /// </summary>
+        public event EventHandler<FormMessageEventArgs> MainFormMessage;
     }
 }
