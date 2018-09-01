@@ -16,7 +16,7 @@ namespace WinControl
         /// <summary>
         /// Initializes a new instance of the class.
         /// </summary>
-        public FormMessageEventArgs(Form source, string message, Dictionary<string, object> arguments = null)
+        public FormMessageEventArgs(Form source, string message, Dictionary<string, object> arguments)
         {
             Source = source;
             Message = message;

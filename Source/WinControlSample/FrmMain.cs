@@ -434,17 +434,17 @@ namespace WinControlSample
 
         private void miViewBlue_Click(object sender, EventArgs e)
         {
-            winControl.ControlColorScheme = WinControl.WinControl.ColorScheme.Blue;
+            winControl.ControlColorScheme = ColorScheme.Blue;
         }
 
         private void miViewGreen_Click(object sender, EventArgs e)
         {
-            winControl.ControlColorScheme = WinControl.WinControl.ColorScheme.Green;
+            winControl.ControlColorScheme = ColorScheme.Green;
         }
 
         private void miViewGray_Click(object sender, EventArgs e)
         {
-            winControl.ControlColorScheme = WinControl.WinControl.ColorScheme.Gray;
+            winControl.ControlColorScheme = ColorScheme.Gray;
         }
 
         private void miViewEnglish_Click(object sender, EventArgs e)

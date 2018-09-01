@@ -96,7 +96,7 @@ namespace WinControl
         /// <summary>
         /// Sends the message from a child form to a main form or vice versa.
         /// </summary>
-        public void SendMessage(Form source, string message, Dictionary<string, object> arguments = null)
+        public bool SendMessage(Form source, string message, Dictionary<string, object> arguments = null)
         {
             FormMessageEventArgs eventArgs = new FormMessageEventArgs(source, message, arguments);
 
@@ -104,6 +104,8 @@ namespace WinControl
                 OnChildFormMessage(eventArgs);
             else
                 OnMainFormMessage(eventArgs);
+
+            return !eventArgs.Cancel;
         }
 
 

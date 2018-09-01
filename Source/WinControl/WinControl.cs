@@ -18,35 +18,6 @@ namespace WinControl
     public partial class WinControl : UserControl
     {
         /// <summary>
-        /// Page with a tab.
-        /// <para>Страница с закладкой.</para>
-        /// </summary>
-        private class TabPage
-        {
-            /// <summary>
-            /// Gets or sets the panel represents the tab page.
-            /// <para>Получить или установить панель, представляющую закладку.</para>
-            /// </summary>
-            public Panel TabPanel { get; set; }
-            /// <summary>
-            /// Gets or sets the child form with the page content.
-            /// <para>Получить или установить дочернюю форму с содержимым страницы.</para>
-            /// </summary>
-            public Form ChildForm { get; set; }
-            /// <summary>
-            /// Gets or sets the page's image.
-            /// <para>Получить или установить пиктограмму страницы.</para>
-            /// </summary>
-            public Image Image { get; set; }
-        }
-
-        /// <summary>
-        /// Control's color scheme.
-        /// <para>Цветовая схема элемента управления.</para>
-        /// </summary>
-        public enum ColorScheme { Blue, Green, Gray }
-
-        /// <summary>
         /// Version of the control.
         /// <para>Версия элемента управления.</para>
         /// </summary>
@@ -922,6 +893,28 @@ namespace WinControl
                     ind = tabPageList.Count - 1;
                 SelectTabPage(tabPageList[ind]);
             }
+        }
+
+        /// <summary>
+        /// Updates a hint of a tab page that corresponds to the specified form.
+        /// <para>Обновляет подсказку закладки, соответствующей указанной форме.</para>
+        /// </summary>
+        public void UpdateHint(Form form, string hint)
+        {
+            Panel tabPanel;
+
+            if (form is IChildForm childForm)
+            {
+                tabPanel = childForm.ChildFormTag.TabPanel;
+            }
+            else
+            {
+                TabPage tabPage = FindTabPage(form);
+                tabPanel = tabPage?.TabPanel;
+            }
+
+            if (tabPanel != null)
+                toolTip.SetToolTip(tabPanel, hint);
         }
 
 

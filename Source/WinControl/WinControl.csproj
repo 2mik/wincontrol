@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChildFormClosedEventArgs.cs" />
+    <Compile Include="ColorScheme.cs" />
     <Compile Include="FormMessageEventArgs.cs" />
     <Compile Include="FrmSaveRequest.cs">
       <SubType>Form</SubType>
@@ -54,6 +55,7 @@
       <DependentUpon>FrmSaveRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabPage.cs" />
     <Compile Include="WinControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
