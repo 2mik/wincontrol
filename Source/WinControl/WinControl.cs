@@ -420,13 +420,7 @@ namespace WinControl
         /// </summary>
         private TabPage FindTabPage(Form form)
         {
-            for (int i = 0; i < tabPageList.Count; i++)
-            {
-                TabPage tabPage = tabPageList[i];
-                if (tabPage.ChildForm == form)
-                    return tabPage;
-            }
-            return null;
+            return FindTabPage(form, out int index);
         }
 
         /// <summary>
@@ -435,7 +429,7 @@ namespace WinControl
         /// </summary>
         private TabPage FindTabPage(Form form, out int index)
         {
-            for (int i = 0; i < tabPageList.Count; i++)
+            for (int i = 0, cnt = tabPageList.Count; i < cnt; i++)
             {
                 TabPage tabPage = tabPageList[i];
                 if (tabPage.ChildForm == form)
@@ -759,7 +753,7 @@ namespace WinControl
         }
 
         /// <summary>
-        /// Closes a form.
+        /// Closes the form.
         /// <para>Закрыть форму.</para>
         /// </summary>
         public void CloseForm(Form form, out bool cancel)
@@ -768,10 +762,7 @@ namespace WinControl
             // отображение формы запроса на сохранение данных, если изменения не сохранены
             if (form is IChildForm childForm && childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
             {
-                List<IChildForm> savedItems = new List<IChildForm>
-                {
-                    childForm
-                };
+                List<IChildForm> savedItems = new List<IChildForm> { childForm };
                 ShowSaveRequest(savedItems, out cancel);
             }
             else
@@ -783,6 +774,15 @@ namespace WinControl
             // закрытие страницы
             if (!cancel)
                 CloseTabPage(FindTabPage(form, out int index), index);
+        }
+
+        /// <summary>
+        /// Closes the form without the possibility of cancellation.
+        /// <para>Закрыть форму без возможности отмены.</para>
+        /// </summary>
+        public void CloseForm(Form form)
+        {
+            CloseTabPage(FindTabPage(form, out int index), index);
         }
 
         /// <summary>
