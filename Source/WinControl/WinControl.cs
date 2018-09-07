@@ -581,6 +581,15 @@ namespace WinControl
         }
 
         /// <summary>
+        /// Get the form title, taking into account the modified flag.
+        /// <para>Получить заголовок формы, учитывая признак изменения.</para>
+        /// </summary>
+        private string GetFormTitle(Form form)
+        {
+            return form.Text + (form is IChildForm childForm && childForm.ChildFormTag.Modified ? "*" : "");
+        }
+
+        /// <summary>
         /// Shows the save request form.
         /// <para>Показать форму запроса на сохранение данных.</para>
         /// </summary>
@@ -726,7 +735,6 @@ namespace WinControl
                 {
                     childForm.ChildFormTag = new ChildFormTag()
                     {
-                        Title = form.Text,
                         TreeNode = treeNode,
                         TabPanel = pnlNewTab,
                         ChildForm = form
@@ -1143,10 +1151,11 @@ namespace WinControl
         {
             Form form = (Form)sender;
             TabPage tabPage = FindTabPage(form);
+
             if (form != null && tabPage != null)
             {
                 Graphics graphics = CreateGraphics();
-                string text = form.Text.Trim();
+                string text = GetFormTitle(form);
                 SizeF sizeF = graphics.MeasureString(text, tabSelectedFont);
                 graphics.Dispose();
 
@@ -1188,7 +1197,7 @@ namespace WinControl
             // отображение "*" на панели закаладки при изменении данных
             if (sender is ChildFormTag childFormTag)
             {
-                childFormTag.TabPanel.Text = childFormTag.Title + (childFormTag.Modified ? "*" : "");
+                childFormTag.TabPanel.Text = GetFormTitle(childFormTag.ChildForm);
                 childFormTag.TabPanel.Invalidate();
             }
         }

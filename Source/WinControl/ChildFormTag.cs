@@ -22,7 +22,6 @@ namespace WinControl
         public ChildFormTag()
         {
             modified = false;
-            Title = "";
             TreeNode = null;
             TabPanel = null;
             ModifiedChanged = null;
@@ -47,11 +46,6 @@ namespace WinControl
                 }
             }
         }
-
-        /// <summary>
-        /// Gets the title of the child form.
-        /// </summary>
-        public string Title { get; set; }
 
         /// <summary>
         /// Gets or sets the tree node associated with the child form.

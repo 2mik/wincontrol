@@ -8,10 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace WinControl
@@ -46,8 +42,10 @@ namespace WinControl
             {
                 clbTabPages.Items.Clear();
                 foreach (IChildForm item in SavedItems)
-                    try { clbTabPages.Items.Add(item.ChildFormTag.Title, true); }
+                {
+                    try { clbTabPages.Items.Add(item.ChildFormTag.ChildForm.Text, true); }
                     catch { }
+                }
             }
         }
 
