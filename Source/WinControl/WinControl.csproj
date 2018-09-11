@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFormEventArgs.cs" />
     <Compile Include="ChildFormClosedEventArgs.cs" />
     <Compile Include="ColorScheme.cs" />
     <Compile Include="FormMessageEventArgs.cs" />

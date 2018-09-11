@@ -100,7 +100,7 @@ namespace WinControl
         {
             get
             {
-                List<Form> forms = new List<Form>();
+                List<Form> forms = new List<Form>(tabPageList.Count);
                 foreach (TabPage tabPage in tabPageList)
                 {
                     Form form = tabPage.ChildForm;
@@ -508,12 +508,13 @@ namespace WinControl
                 // defines the tab page index
                 // определение индекса страницы
                 if (tabPageIndex < 0)
-                {
                     tabPageIndex = tabPageList.IndexOf(tabPage);
-                }
 
-                // closes the form and removes the tab page
-                // зарытие формы и удаление страницы
+                // removes the tab page and closes the form
+                // удаление страницы и закрытие формы
+                flpnlTabsLeft.Controls.Remove(tabPage.TabPanel);
+                tabPageList.RemoveAt(tabPageIndex);
+
                 Form form = tabPage.ChildForm;
                 if (form != null && !formClosing)
                 {
@@ -522,8 +523,6 @@ namespace WinControl
                     if (form.Visible) // the form hasn't closed (форма не закрылась)
                         form.Hide();
                 }
-                flpnlTabsLeft.Controls.Remove(tabPage.TabPanel);
-                tabPageList.RemoveAt(tabPageIndex);
 
                 // selects the tab page
                 // выбор новой страницы
@@ -655,6 +654,15 @@ namespace WinControl
         protected void OnChildFormMessage(FormMessageEventArgs e)
         {
             ChildFormMessage?.Invoke(this, e);
+        }
+
+        /// <summary>
+        /// Raises the ChildFormModifiedChanged event.
+        /// <para>Вызвать событие ChildFormModifiedChanged.</para>
+        /// </summary>
+        protected void OnChildFormModifiedChanged(ChildFormEventArgs e)
+        {
+            ChildFormModifiedChanged?.Invoke(this, e);
         }
 
 
@@ -791,6 +799,18 @@ namespace WinControl
         public void CloseForm(Form form)
         {
             CloseTabPage(FindTabPage(form, out int index), index);
+        }
+
+        /// <summary>
+        /// Closes the active form.
+        /// <para>Закрыть активную форму.</para>
+        /// </summary>
+        public void CloseActiveForm(out bool cancel)
+        {
+            if (ActiveForm == null)
+                cancel = false;
+            else
+                CloseForm(ActiveForm, out cancel);
         }
 
         /// <summary>
@@ -949,6 +969,14 @@ namespace WinControl
         [Category("WinControl")]
         [Description("Occurs when a child form sends a message. Происходит, когда дочерняя форма отправляет сообщение.")]
         public event EventHandler<FormMessageEventArgs> ChildFormMessage;
+
+        /// <summary>
+        /// Occurs when the Modified property of a child form has changed.
+        /// <para>Происходит, когда изменяется свойство Modified дочерней формы.</para>
+        /// </summary>
+        [Category("WinControl")]
+        [Description("Occurs when the Modified property of a child form has changed. Происходит, когда изменяется свойство Modified дочерней формы.")]
+        public event EventHandler<ChildFormEventArgs> ChildFormModifiedChanged;
 
 
         private void WinControl_BackColorChanged(object sender, EventArgs e)
@@ -1199,6 +1227,8 @@ namespace WinControl
             {
                 childFormTag.TabPanel.Text = GetFormTitle(childFormTag.ChildForm);
                 childFormTag.TabPanel.Invalidate();
+
+                OnChildFormModifiedChanged(new ChildFormEventArgs(childFormTag.ChildForm));
             }
         }
 
