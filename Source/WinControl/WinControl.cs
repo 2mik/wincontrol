@@ -13,7 +13,7 @@ namespace WinControl
     /// <para>Элемент управления, содержащий набор форм, которые используют общее пространство на экране.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2018
+    /// Author: Mikhail Shiryaev, 2010, 2018-2019
     /// </remarks>
     public partial class WinControl : UserControl
     {
@@ -21,7 +21,7 @@ namespace WinControl
         /// Version of the control.
         /// <para>Версия элемента управления.</para>
         /// </summary>
-        public const string Version = "1.0.1.0";
+        public const string Version = "1.0.1.1";
 
         private List<TabPage> tabPageList; // list of tab pages (список страниц)
         private TabPage selectedTab;       // selected tab page (выбранная страница)
@@ -429,15 +429,19 @@ namespace WinControl
         /// </summary>
         private TabPage FindTabPage(Form form, out int index)
         {
-            for (int i = 0, cnt = tabPageList.Count; i < cnt; i++)
+            if (form != null)
             {
-                TabPage tabPage = tabPageList[i];
-                if (tabPage.ChildForm == form)
+                for (int i = 0, cnt = tabPageList.Count; i < cnt; i++)
                 {
-                    index = i;
-                    return tabPage;
+                    TabPage tabPage = tabPageList[i];
+                    if (tabPage.ChildForm == form)
+                    {
+                        index = i;
+                        return tabPage;
+                    }
                 }
             }
+
             index = -1;
             return null;
         }
