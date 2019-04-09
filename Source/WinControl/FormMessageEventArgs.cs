@@ -9,7 +9,7 @@ namespace WinControl
     /// <para>Предоставляет данные для события сообщения формы.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018
+    /// Author: Mikhail Shiryaev, 2018-2019
     /// </remarks>
     public class FormMessageEventArgs : EventArgs
     {
@@ -44,5 +44,14 @@ namespace WinControl
         /// Gets or sets a value indicating whether the event should be canceled.
         /// </summary>
         public bool Cancel { get; set; }
+
+
+        /// <summary>
+        /// Gets an argument by key if present, otherwise returns null.
+        /// </summary>
+        public object GetArgument(string key)
+        {
+            return Arguments != null && Arguments.TryGetValue(key, out object value) ? value : null;
+        }
     }
 }
