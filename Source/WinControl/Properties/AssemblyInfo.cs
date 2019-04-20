@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WinControl")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A control that manages multiple forms in VS 2008 style.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WinControl")]
-[assembly: AssemblyCopyright("Copyright © 2010-2018 Mikhail Shiryaev")]
+[assembly: AssemblyCopyright("Copyright © 2010-2019 Mikhail Shiryaev")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

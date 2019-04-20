@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WinControl</id>
+    <version>1.0.1.1</version>
+    <title>$title$</title>
+    <authors>Mikhail Shiryaev</authors>
+    <owners>Mikhail Shiryaev</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/2mik/wincontrol</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A control that manages multiple forms in VS 2008 style.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>winforms control manage</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinControl.dll" target="lib\net461\" />
+  </files>
+</package>
