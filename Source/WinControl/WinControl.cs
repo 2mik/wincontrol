@@ -21,7 +21,7 @@ namespace WinControl
         /// Version of the control.
         /// <para>Версия элемента управления.</para>
         /// </summary>
-        public const string Version = "1.0.1.1";
+        public const string Version = "1.0.1.2";
 
         private List<TabPage> tabPageList; // list of tab pages (список страниц)
         private TabPage selectedTab;       // selected tab page (выбранная страница)

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>WinControl</id>
-    <version>1.0.1.1</version>
+    <version>1.0.1.2</version>
     <title>$title$</title>
     <authors>Mikhail Shiryaev</authors>
     <owners>Mikhail Shiryaev</owners>
@@ -16,5 +16,6 @@
   </metadata>
   <files>
     <file src="bin\Release\WinControl.dll" target="lib\net461\" />
+    <file src="bin\Release\WinControl.xml" target="lib\net461\" />
   </files>
 </package>
