@@ -39,9 +39,10 @@
             // 
             this.clbTabPages.CheckOnClick = true;
             this.clbTabPages.FormattingEnabled = true;
-            this.clbTabPages.Location = new System.Drawing.Point(12, 25);
+            this.clbTabPages.IntegralHeight = false;
+            this.clbTabPages.Location = new System.Drawing.Point(12, 27);
             this.clbTabPages.Name = "clbTabPages";
-            this.clbTabPages.Size = new System.Drawing.Size(370, 199);
+            this.clbTabPages.Size = new System.Drawing.Size(370, 197);
             this.clbTabPages.TabIndex = 1;
             // 
             // lblQuestion
@@ -49,7 +50,7 @@
             this.lblQuestion.AutoSize = true;
             this.lblQuestion.Location = new System.Drawing.Point(12, 9);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(183, 13);
+            this.lblQuestion.Size = new System.Drawing.Size(202, 15);
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "Save changes to the following items?";
             // 
@@ -88,7 +89,7 @@
             // FrmSaveRequest
             // 
             this.AcceptButton = this.btnYes;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(394, 265);

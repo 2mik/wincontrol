@@ -335,7 +335,6 @@
             // 
             this.pnlLeft.Controls.Add(this.treeView);
             resources.ApplyResources(this.pnlLeft, "pnlLeft");
-            this.pnlLeft.MinimumSize = new System.Drawing.Size(150, 0);
             this.pnlLeft.Name = "pnlLeft";
             // 
             // treeView
@@ -344,13 +343,14 @@
             this.treeView.ForeColor = System.Drawing.SystemColors.WindowText;
             this.treeView.ImageList = this.ilTree;
             this.treeView.Name = "treeView";
-            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
-            this.treeView.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_BeforeExpand);
             this.treeView.BeforeCollapse += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_BeforeCollapse);
+            this.treeView.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_BeforeExpand);
+            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
             this.treeView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView_KeyDown);
             // 
             // ilTree
             // 
+            this.ilTree.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ilTree.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilTree.ImageStream")));
             this.ilTree.TransparentColor = System.Drawing.Color.Transparent;
             this.ilTree.Images.SetKeyName(0, "db.gif");
@@ -377,7 +377,7 @@
             // 
             resources.ApplyResources(this.winControl, "winControl");
             this.winControl.Image = ((System.Drawing.Image)(resources.GetObject("winControl.Image")));
-            this.winControl.MessageFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.winControl.MessageFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.winControl.Name = "winControl";
             this.winControl.ActiveFormChanged += new System.EventHandler(this.winControl_ActiveFormChanged);
             // 
@@ -393,9 +393,9 @@
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
             this.Name = "FrmMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
             this.toolMain.ResumeLayout(false);
