@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="colAddress" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="colAddressVal" xml:space="preserve">
+    <value>г. Москва</value>
+  </data>
+  <data name="colComment" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="colName" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="colNameVal" xml:space="preserve">
+    <value>Иванов И.И.</value>
+  </data>
+  <data name="nodeDBText" xml:space="preserve">
+    <value>База данных</value>
+  </data>
+  <data name="nodeElemText" xml:space="preserve">
+    <value>Элемент</value>
+  </data>
+  <data name="nodeGroupText" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="saveComplete" xml:space="preserve">
+    <value>Данные {0} как бы сохранены.</value>
+  </data>
 </root>

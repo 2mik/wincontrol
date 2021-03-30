@@ -7,7 +7,7 @@
     <Authors>Mikhail Shiryaev</Authors>
     <Company />
     <PackageProjectUrl>https://github.com/2mik/wincontrol</PackageProjectUrl>
-    <Copyright>Copyright © 2019-2021</Copyright>
+    <Copyright>Copyright © 2010-2021</Copyright>
     <PackageTags>winforms control manage</PackageTags>
     <Description>A control that manages multiple forms in VS 2008 style.</Description>
   </PropertyGroup>
