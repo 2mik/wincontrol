@@ -31,8 +31,8 @@ namespace GroupPanelSample
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            winControl.AddForm(new FrmSecond(), "", null);
-            winControl.AddForm(new FrmFirst(), "", null);
+            winControl.AddForm(new FrmSecond(), "", null, null);
+            winControl.AddForm(new FrmFirst(), "", null, null);
         }
 
         private void toolStripButton_Click(object sender, EventArgs e)
