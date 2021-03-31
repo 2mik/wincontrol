@@ -1,22 +1,10 @@
-﻿/*
- * The main form.
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Главная форма приложения.
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Resources;
+using System.Diagnostics;
 using System.Globalization;
+using System.Resources;
+using System.Windows.Forms;
 using WinControl;
 
 namespace WinControlSample
@@ -25,6 +13,9 @@ namespace WinControlSample
     /// The main form.
     /// <para>Главная форма приложения.</para>
     /// </summary>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010, 2021
+    /// </remarks>
     public partial class FrmMain : Form
     {
         /// <summary>
@@ -504,7 +495,7 @@ namespace WinControlSample
 
         private void lblStatusLink_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.wincontrol.rapidscada.ru");
+            Process.Start(new ProcessStartInfo(lblStatusLink.Text) { UseShellExecute = true });
         }
 
         private void winControl_ActiveFormChanged(object sender, EventArgs e)

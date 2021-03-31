@@ -478,13 +478,13 @@
     <value>227, 17</value>
   </data>
   <data name="lblStatusText.Text" xml:space="preserve">
-    <value>Support the developer with a donation on</value>
+    <value>View on GitHub</value>
   </data>
   <data name="lblStatusLink.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>168, 17</value>
   </data>
   <data name="lblStatusLink.Text" xml:space="preserve">
-    <value>www.wincontrol.rapidscada.ru</value>
+    <value>https://github.com/2mik/wincontrol</value>
   </data>
   <data name="statusMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 394</value>

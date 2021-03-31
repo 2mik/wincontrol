@@ -1,19 +1,5 @@
-﻿/*
- * The about form.
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Форма о программе.
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WinControlSample
@@ -22,6 +8,9 @@ namespace WinControlSample
     /// The about form.
     /// <para>Форма о программе.</para>
     /// </summary>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010, 2021
+    /// </remarks>
     public partial class FrmAbout : Form
     {
         public FrmAbout()
@@ -31,7 +20,7 @@ namespace WinControlSample
 
         private void lblLink_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.wincontrol.rapidscada.ru");
+            Process.Start(new ProcessStartInfo("https://github.com/2mik/wincontrol") { UseShellExecute = true });
             Close();
         }
 

@@ -1,22 +1,8 @@
-﻿/*
- * The child form.
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Дочерняя форма.
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Resources;
 using System.Globalization;
+using System.Resources;
+using System.Windows.Forms;
 using WinControl;
 
 namespace WinControlSample
@@ -25,6 +11,9 @@ namespace WinControlSample
     /// The child form.
     /// <para>Дочерняя форма</para>
     /// </summary>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010
+    /// </remarks>
     public partial class FrmChild : Form, IChildForm
     {
         private string saveComplete;
