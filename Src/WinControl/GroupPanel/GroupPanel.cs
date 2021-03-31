@@ -1,18 +1,6 @@
-﻿/*
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.ComponentModel.Design;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -22,6 +10,9 @@ namespace WinControl
     /// Represents a control used to group collections of controls.
     /// </summary>
     /// <para>Элемент управления, используемый для группировки наборов элементов.</para>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010
+    /// </remarks>
     [Designer(typeof(GroupPanel.Designer))]
     public partial class GroupPanel : UserControl
     {

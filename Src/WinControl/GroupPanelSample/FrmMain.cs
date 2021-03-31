@@ -1,19 +1,6 @@
-﻿/*
- * The main form.
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Главная форма приложения.
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;   
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
+using System.Diagnostics;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GroupPanelSample
@@ -22,6 +9,9 @@ namespace GroupPanelSample
     /// The main form.
     /// <para>Главная форма приложения.</para>
     /// </summary>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010, 2021
+    /// </remarks>
     public partial class FrmMain : Form
     {
         public FrmMain()
@@ -42,7 +32,7 @@ namespace GroupPanelSample
 
         private void lblStatusLink_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.wincontrol.rapidscada.ru");
+            Process.Start(new ProcessStartInfo(lblStatusLink.Text) { UseShellExecute = true });
         }
 
         private void statusStrip_Paint(object sender, PaintEventArgs e)

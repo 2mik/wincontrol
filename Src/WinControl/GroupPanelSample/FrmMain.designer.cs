@@ -51,7 +51,8 @@
             this.lblStatusLink});
             this.statusStrip.Location = new System.Drawing.Point(0, 508);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(638, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip.Size = new System.Drawing.Size(614, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Paint += new System.Windows.Forms.PaintEventHandler(this.statusStrip_Paint);
@@ -59,15 +60,15 @@
             // lblStatusText
             // 
             this.lblStatusText.Name = "lblStatusText";
-            this.lblStatusText.Size = new System.Drawing.Size(127, 17);
+            this.lblStatusText.Size = new System.Drawing.Size(139, 17);
             this.lblStatusText.Text = "Look for new versions on";
             // 
             // lblStatusLink
             // 
             this.lblStatusLink.IsLink = true;
             this.lblStatusLink.Name = "lblStatusLink";
-            this.lblStatusLink.Size = new System.Drawing.Size(154, 17);
-            this.lblStatusLink.Text = "www.wincontrol.rapidscada.ru";
+            this.lblStatusLink.Size = new System.Drawing.Size(202, 17);
+            this.lblStatusLink.Text = "https://github.com/2mik/wincontrol";
             this.lblStatusLink.Click += new System.EventHandler(this.lblStatusLink_Click);
             // 
             // toolStrip
@@ -83,7 +84,7 @@
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip.Size = new System.Drawing.Size(638, 56);
+            this.toolStrip.Size = new System.Drawing.Size(614, 56);
             this.toolStrip.TabIndex = 8;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -142,27 +143,28 @@
             this.winControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(230)))), ((int)(((byte)(215)))));
             this.winControl.ButtonsVisible = false;
             this.winControl.Image = null;
-            this.winControl.Location = new System.Drawing.Point(12, 65);
-            this.winControl.MessageFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.winControl.Location = new System.Drawing.Point(0, 56);
+            this.winControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.winControl.MessageFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.winControl.Name = "winControl";
             this.winControl.SaveReqCancel = "Cancel";
             this.winControl.SaveReqCaption = "Save changes";
             this.winControl.SaveReqNo = "&No";
             this.winControl.SaveReqQuestion = "Save changes to the following items?";
             this.winControl.SaveReqYes = "&Yes";
-            this.winControl.Size = new System.Drawing.Size(614, 432);
+            this.winControl.Size = new System.Drawing.Size(614, 452);
             this.winControl.TabIndex = 6;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(230)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(638, 530);
+            this.ClientSize = new System.Drawing.Size(614, 530);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.winControl);
-            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmMain";

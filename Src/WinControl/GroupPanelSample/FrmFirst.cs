@@ -1,19 +1,4 @@
-﻿/*
- * The form displayed the first page.
- * Developer:
- * 2010, Mikhail Shiryaev
- * 
- * Форма, отображающая первую страницу.
- * Разработчик:
- * 2010, Ширяев Михаил
- */
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
 using WinControl;
 
@@ -23,6 +8,9 @@ namespace GroupPanelSample
     /// The form displayed the first page.
     /// </summary>
     /// <para>Форма, отображающая первую страницу.</para>
+    /// <remarks>
+    /// Author: Mikhail Shiryaev, 2010
+    /// </remarks>
     public partial class FrmFirst : Form
     {
         public FrmFirst()

@@ -200,7 +200,7 @@
             // 
             // InheritedPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.ContentBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.Name = "InheritedPanel";
             this.Size = new System.Drawing.Size(580, 120);
