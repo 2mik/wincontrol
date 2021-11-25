@@ -9,7 +9,7 @@ namespace WinControl
     /// <para>Представляет объект, связанный с дочерней формой.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2018
+    /// Author: Mikhail Shiryaev, 2010, 2018, 2021
     /// </remarks>
     public class ChildFormTag
     {
@@ -64,40 +64,42 @@ namespace WinControl
 
 
         /// <summary>
-        /// Raises the ModifiedChanged event.
+        /// Raises a ModifiedChanged event.
         /// </summary>
         protected void OnModifiedChanged(EventArgs e)
         {
             ModifiedChanged?.Invoke(this, e);
         }
-        
+
         /// <summary>
-        /// Raises the ChildFormMessage event.
+        /// Raises a MessageFromChildForm event.
         /// </summary>
-        protected void OnChildFormMessage(FormMessageEventArgs e)
+        protected void OnMessageFromChildForm(FormMessageEventArgs e)
         {
+            MessageFromChildForm?.Invoke(this, e);
             ChildFormMessage?.Invoke(this, e);
         }
 
         /// <summary>
-        /// Raises the MainFormMessage event.
+        /// Raises a MessageToChildForm event.
         /// </summary>
-        protected void OnMainFormMessage(FormMessageEventArgs e)
+        protected void OnMessageToChildForm(FormMessageEventArgs e)
         {
+            MessageToChildForm?.Invoke(this, e);
             MainFormMessage?.Invoke(this, e);
         }
 
         /// <summary>
-        /// Sends the message from a child form to a main form or vice versa.
+        /// Sends the message from a child form to other forms or vice versa.
         /// </summary>
-        public bool SendMessage(Form source, string message, Dictionary<string, object> arguments = null)
+        public bool SendMessage(Control source, string message, Dictionary<string, object> arguments = null)
         {
-            FormMessageEventArgs eventArgs = new FormMessageEventArgs(source, message, arguments);
+            FormMessageEventArgs eventArgs = new(source, message, arguments);
 
             if (source == ChildForm)
-                OnChildFormMessage(eventArgs);
+                OnMessageFromChildForm(eventArgs);
             else
-                OnMainFormMessage(eventArgs);
+                OnMessageToChildForm(eventArgs);
 
             return !eventArgs.Cancel;
         }
@@ -109,13 +111,25 @@ namespace WinControl
         public event EventHandler ModifiedChanged;
 
         /// <summary>
+        /// Occurs when the child form sends a message to another form that subscribed to this event.
+        /// </summary>
+        public event EventHandler<FormMessageEventArgs> MessageFromChildForm;
+
+        /// <summary>
+        /// Occurs when another form sends a message to the child form.
+        /// </summary>
+        public event EventHandler<FormMessageEventArgs> MessageToChildForm;
+
+        /// <summary>
         /// Occurs when a child form sends a message.
         /// </summary>
+        [Obsolete("Use the MessageFromChildForm event.")]
         public event EventHandler<FormMessageEventArgs> ChildFormMessage;
 
         /// <summary>
-        /// Occurs when a main form sends a message.
+        /// Occurs when the main form or another child form sends a message.
         /// </summary>
+        [Obsolete("Use the MessageToChildForm event.")]
         public event EventHandler<FormMessageEventArgs> MainFormMessage;
     }
 }

@@ -9,14 +9,14 @@ namespace WinControl
     /// <para>Предоставляет данные для события сообщения формы.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018-2019
+    /// Author: Mikhail Shiryaev, 2018-2019, 2021
     /// </remarks>
     public class FormMessageEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the class.
         /// </summary>
-        public FormMessageEventArgs(Form source, string message, Dictionary<string, object> arguments)
+        public FormMessageEventArgs(Control source, string message, Dictionary<string, object> arguments)
         {
             Source = source;
             Message = message;
@@ -26,9 +26,9 @@ namespace WinControl
 
 
         /// <summary>
-        /// Gets the form initiated the event.
+        /// Gets the control or form initiated the event.
         /// </summary>
-        public Form Source { get; }
+        public Control Source { get; }
 
         /// <summary>
         /// Gets the message to send.

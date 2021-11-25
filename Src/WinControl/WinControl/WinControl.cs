@@ -668,8 +668,10 @@ namespace WinControl
             // tests the form for duplicating
             // проверка дублирования формы
             foreach (TabPage tab in tabPageList)
+            {
                 if (tab.ChildForm != null && tab.ChildForm == form)
                     throw new ArgumentException("The form is duplicated.");
+            }
 
             // hides the child form that was selected
             // сокрытие дочерней формы, которая была выбрана ранее
@@ -734,14 +736,14 @@ namespace WinControl
                 // настройка формы
                 if (form is IChildForm childForm)
                 {
-                    childForm.ChildFormTag = new ChildFormTag()
+                    childForm.ChildFormTag = new ChildFormTag
                     {
                         TreeNode = treeNode,
                         TabPanel = pnlNewTab,
                         ChildForm = form
                     };
                     childForm.ChildFormTag.ModifiedChanged += ChildFormTag_ModifiedChanged;
-                    childForm.ChildFormTag.ChildFormMessage += ChildFormTag_ChildFormMessage;
+                    childForm.ChildFormTag.MessageFromChildForm += ChildFormTag_MessageFromChildForm;
                 }
 
                 // shows the form
@@ -1221,7 +1223,7 @@ namespace WinControl
             }
         }
 
-        private void ChildFormTag_ChildFormMessage(object sender, FormMessageEventArgs e)
+        private void ChildFormTag_MessageFromChildForm(object sender, FormMessageEventArgs e)
         {
             OnChildFormMessage(e);
         }
