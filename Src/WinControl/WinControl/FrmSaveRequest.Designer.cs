@@ -42,13 +42,13 @@
             this.clbTabPages.IntegralHeight = false;
             this.clbTabPages.Location = new System.Drawing.Point(12, 27);
             this.clbTabPages.Name = "clbTabPages";
-            this.clbTabPages.Size = new System.Drawing.Size(370, 197);
+            this.clbTabPages.Size = new System.Drawing.Size(360, 200);
             this.clbTabPages.TabIndex = 1;
             // 
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(12, 9);
+            this.lblQuestion.Location = new System.Drawing.Point(9, 9);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(202, 15);
             this.lblQuestion.TabIndex = 0;
@@ -57,7 +57,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(307, 230);
+            this.btnCancel.Location = new System.Drawing.Point(297, 243);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -67,7 +67,7 @@
             // btnNo
             // 
             this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnNo.Location = new System.Drawing.Point(226, 230);
+            this.btnNo.Location = new System.Drawing.Point(216, 243);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(75, 23);
             this.btnNo.TabIndex = 3;
@@ -78,7 +78,7 @@
             // btnYes
             // 
             this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnYes.Location = new System.Drawing.Point(145, 230);
+            this.btnYes.Location = new System.Drawing.Point(135, 243);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(75, 23);
             this.btnYes.TabIndex = 2;
@@ -92,7 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(394, 265);
+            this.ClientSize = new System.Drawing.Size(384, 278);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnCancel);

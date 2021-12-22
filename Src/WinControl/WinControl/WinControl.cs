@@ -134,12 +134,11 @@ namespace WinControl
         {
             get
             {
-                return pnlTabsRight.Width > 1;
+                return pnlTabsRight.Visible;
             }
             set
             {
-                pnlTabsRight.Width = value ? 45 : 1;
-                btnTabs.Visible = btnClose.Visible = value;
+                pnlTabsRight.Visible = value;
             }
         }
 
