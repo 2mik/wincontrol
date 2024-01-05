@@ -28,189 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnRun = new System.Windows.Forms.Button();
-            this.pnlContent.SuspendLayout();
-            this.SuspendLayout();
+            textBox3 = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            comboBox3 = new System.Windows.Forms.ComboBox();
+            label9 = new System.Windows.Forms.Label();
+            comboBox2 = new System.Windows.Forms.ComboBox();
+            label8 = new System.Windows.Forms.Label();
+            comboBox1 = new System.Windows.Forms.ComboBox();
+            label7 = new System.Windows.Forms.Label();
+            btnRun = new System.Windows.Forms.Button();
+            pnlContent.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlContent
             // 
-            this.pnlContent.Controls.Add(this.btnRun);
-            this.pnlContent.Controls.Add(this.comboBox3);
-            this.pnlContent.Controls.Add(this.label9);
-            this.pnlContent.Controls.Add(this.comboBox2);
-            this.pnlContent.Controls.Add(this.label8);
-            this.pnlContent.Controls.Add(this.comboBox1);
-            this.pnlContent.Controls.Add(this.label7);
-            this.pnlContent.Controls.Add(this.textBox3);
-            this.pnlContent.Controls.Add(this.label3);
-            this.pnlContent.Controls.Add(this.textBox2);
-            this.pnlContent.Controls.Add(this.label2);
-            this.pnlContent.Controls.Add(this.textBox1);
-            this.pnlContent.Controls.Add(this.label1);
-            this.pnlContent.Size = new System.Drawing.Size(580, 100);
+            pnlContent.Controls.Add(btnRun);
+            pnlContent.Controls.Add(comboBox3);
+            pnlContent.Controls.Add(label9);
+            pnlContent.Controls.Add(comboBox2);
+            pnlContent.Controls.Add(label8);
+            pnlContent.Controls.Add(comboBox1);
+            pnlContent.Controls.Add(label7);
+            pnlContent.Controls.Add(textBox3);
+            pnlContent.Controls.Add(label3);
+            pnlContent.Controls.Add(textBox2);
+            pnlContent.Controls.Add(label2);
+            pnlContent.Controls.Add(textBox1);
+            pnlContent.Controls.Add(label1);
+            pnlContent.Size = new System.Drawing.Size(580, 100);
             // 
             // textBox3
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Red;
-            this.textBox3.Location = new System.Drawing.Point(70, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "Text 3";
+            textBox3.ForeColor = System.Drawing.Color.Red;
+            textBox3.Location = new System.Drawing.Point(70, 64);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new System.Drawing.Size(100, 23);
+            textBox3.TabIndex = 9;
+            textBox3.Text = "Text 3";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(10, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Some text";
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label3.Location = new System.Drawing.Point(10, 68);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(60, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Some text";
             // 
             // textBox2
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Green;
-            this.textBox2.Location = new System.Drawing.Point(70, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Text 2";
+            textBox2.ForeColor = System.Drawing.Color.Green;
+            textBox2.Location = new System.Drawing.Point(70, 38);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(100, 23);
+            textBox2.TabIndex = 5;
+            textBox2.Text = "Text 2";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(10, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Some text";
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Location = new System.Drawing.Point(10, 42);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(60, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Some text";
             // 
             // textBox1
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.textBox1.Location = new System.Drawing.Point(70, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Text 1";
+            textBox1.ForeColor = System.Drawing.Color.DarkBlue;
+            textBox1.Location = new System.Drawing.Point(70, 12);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(100, 23);
+            textBox1.TabIndex = 1;
+            textBox1.Text = "Text 1";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(10, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Some text";
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Location = new System.Drawing.Point(10, 16);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(60, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Some text";
             // 
             // comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Item 1",
-            "Item 2",
-            "Item 3"});
-            this.comboBox3.Location = new System.Drawing.Point(263, 66);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 11;
-            this.comboBox3.Text = "Item 3";
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Item 1", "Item 2", "Item 3" });
+            comboBox3.Location = new System.Drawing.Point(263, 66);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new System.Drawing.Size(121, 23);
+            comboBox3.TabIndex = 11;
+            comboBox3.Text = "Item 3";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(198, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Select item";
+            label9.AutoSize = true;
+            label9.BackColor = System.Drawing.Color.Transparent;
+            label9.Location = new System.Drawing.Point(198, 70);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(65, 15);
+            label9.TabIndex = 10;
+            label9.Text = "Select item";
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Item 1",
-            "Item 2",
-            "Item 3"});
-            this.comboBox2.Location = new System.Drawing.Point(263, 39);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Item 2";
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Item 1", "Item 2", "Item 3" });
+            comboBox2.Location = new System.Drawing.Point(263, 39);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new System.Drawing.Size(121, 23);
+            comboBox2.TabIndex = 7;
+            comboBox2.Text = "Item 2";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(198, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Select item";
+            label8.AutoSize = true;
+            label8.BackColor = System.Drawing.Color.Transparent;
+            label8.Location = new System.Drawing.Point(198, 43);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(65, 15);
+            label8.TabIndex = 6;
+            label8.Text = "Select item";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Item 1",
-            "Item 2",
-            "Item 3"});
-            this.comboBox1.Location = new System.Drawing.Point(263, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Item 1";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Item 1", "Item 2", "Item 3" });
+            comboBox1.Location = new System.Drawing.Point(263, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(121, 23);
+            comboBox1.TabIndex = 3;
+            comboBox1.Text = "Item 1";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(198, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Select item";
+            label7.AutoSize = true;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label7.Location = new System.Drawing.Point(198, 16);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(65, 15);
+            label7.TabIndex = 2;
+            label7.Text = "Select item";
             // 
             // btnRun
             // 
-            this.btnRun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(220)))), ((int)(((byte)(203)))));
-            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRun.Location = new System.Drawing.Point(416, 66);
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(70, 21);
-            this.btnRun.TabIndex = 12;
-            this.btnRun.Text = "Run";
-            this.btnRun.UseVisualStyleBackColor = false;
+            btnRun.BackColor = System.Drawing.Color.FromArgb(221, 220, 203);
+            btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnRun.Location = new System.Drawing.Point(416, 66);
+            btnRun.Name = "btnRun";
+            btnRun.Size = new System.Drawing.Size(70, 21);
+            btnRun.TabIndex = 12;
+            btnRun.Text = "Run";
+            btnRun.UseVisualStyleBackColor = false;
             // 
             // InheritedPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.ContentBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.Name = "InheritedPanel";
-            this.Size = new System.Drawing.Size(580, 120);
-            this.TitleBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(193)))), ((int)(((byte)(210)))));
-            this.TitleText = "Inherited Panel";
-            this.TitleTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.pnlContent.ResumeLayout(false);
-            this.pnlContent.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            ContentBottomColor = System.Drawing.Color.FromArgb(232, 230, 255);
+            Name = "InheritedPanel";
+            Size = new System.Drawing.Size(580, 120);
+            TitleBottomColor = System.Drawing.Color.FromArgb(196, 193, 210);
+            TitleText = "Inherited Panel";
+            TitleTopColor = System.Drawing.Color.FromArgb(221, 220, 220);
+            pnlContent.ResumeLayout(false);
+            pnlContent.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
