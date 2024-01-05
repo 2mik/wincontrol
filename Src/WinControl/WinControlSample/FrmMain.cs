@@ -14,7 +14,7 @@ namespace WinControlSample
     /// <para>Главная форма приложения.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2021
+    /// Author: Mikhail Shiryaev, 2010, 2021, 2024
     /// </remarks>
     public partial class FrmMain : Form
     {
@@ -68,13 +68,13 @@ namespace WinControlSample
             }
         }
 
-        
+
         // The nodes of the explorer tree
         // Узлы дерева проводника
+        private readonly List<TreeNode> allNodes; // list of all nodes (список всех узлов дерева)
         private TreeNode nodDB;          // database node (узел базы данных)
         private TreeNode nodGroup1;      // group 1 node (узел группы 1)
         private TreeNode nodGroup2;      // group 2 node (узел группы 2)
-        private List<TreeNode> allNodes; // list of all nodes (список всех узлов дерева)
 
         private string cultureName;      // culture name (наименование культуры)
         private string caption;          // form caption (заголовок формы)
@@ -83,7 +83,7 @@ namespace WinControlSample
         public FrmMain()
         {
             InitializeComponent();
-            allNodes = new List<TreeNode>();
+            allNodes = [];
             cultureName = CultureInfo.CurrentCulture.Name;
             caption = Text;
         }
@@ -95,7 +95,7 @@ namespace WinControlSample
         /// </summary>
         private void InitTreeView(CultureInfo culture)
         {
-            ResourceManager resManager = new ResourceManager("WinControlSample.Strings", typeof(FrmMain).Assembly);
+            ResourceManager resManager = new("WinControlSample.Strings", typeof(FrmMain).Assembly);
             string nodeDBText = resManager.GetString("nodeDBText", culture);
             string nodeGroupText = resManager.GetString("nodeGroupText", culture);
             string nodeElemText = resManager.GetString("nodeElemText", culture);
@@ -163,10 +163,10 @@ namespace WinControlSample
         /// </summary>
         private void ExecNodeAction(TreeNode node)
         {
-            NodeInfo nodeInfo = node.Tag as NodeInfo;
-            if (nodeInfo != null)
+            if (node.Tag is NodeInfo nodeInfo)
             {
                 Form form = nodeInfo.Form;
+
                 if (form == null)
                 {
                     switch (nodeInfo.NodeAction)
@@ -181,9 +181,12 @@ namespace WinControlSample
                         case NodeAction.Action8:
                         case NodeAction.Action9:
                         case NodeAction.Action10:
-                            FrmChild frmChild = new FrmChild();
-                            frmChild.Text = node.Text;
-                            frmChild.CultureName = cultureName;
+                            FrmChild frmChild = new()
+                            {
+                                Text = node.Text,
+                                CultureName = cultureName
+                            };
+
                             form = frmChild;
                             break;
                     }
@@ -199,6 +202,7 @@ namespace WinControlSample
                 {
                     winControl.ActivateForm(form);
                 }
+
                 SetWindowItemsEnabled();
             }
         }
@@ -211,14 +215,14 @@ namespace WinControlSample
         {
             // removes the link to the form associated with a tree node
             // очистка ссылки на форму, связанную с узлом дерева
-            IChildForm itfWin = sender as IChildForm;
-            TreeNode treeNode = itfWin == null || itfWin.ChildFormTag == null ? null : itfWin.ChildFormTag.TreeNode;
+            TreeNode treeNode = sender is not IChildForm itfWin || itfWin.ChildFormTag == null ?
+                null : itfWin.ChildFormTag.TreeNode;
+
             if (treeNode == null)
             {
                 foreach (TreeNode node in allNodes)
                 {
-                    NodeInfo nodeInfo = node.Tag as NodeInfo;
-                    if (nodeInfo != null && nodeInfo.Form == sender)
+                    if (node.Tag is NodeInfo nodeInfo && nodeInfo.Form == sender)
                     {
                         nodeInfo.Form = null;
                         break;
@@ -227,8 +231,7 @@ namespace WinControlSample
             }
             else
             {
-                NodeInfo nodeInfo = treeNode.Tag as NodeInfo;
-                if (nodeInfo != null)
+                if (treeNode.Tag is NodeInfo nodeInfo)
                     nodeInfo.Form = null;
             }
         }
@@ -268,8 +271,8 @@ namespace WinControlSample
         /// </summary>
         private void ApplyCulture(string cultureName)
         {
-            ComponentResourceManager compResManager = new ComponentResourceManager(GetType());
-            CultureInfo culture = new CultureInfo(cultureName);
+            ComponentResourceManager compResManager = new(GetType());
+            CultureInfo culture = new(cultureName);
 
             // the form
             // форма
@@ -302,7 +305,7 @@ namespace WinControlSample
 
             // tree nodes
             // узлы дерева
-            ResourceManager resManager = new ResourceManager("WinControlSample.Strings", typeof(FrmMain).Assembly);
+            ResourceManager resManager = new("WinControlSample.Strings", typeof(FrmMain).Assembly);
             string nodeDBText = resManager.GetString("nodeDBText", culture);
             string nodeGroupText = resManager.GetString("nodeGroupText", culture);
             string nodeElemText = resManager.GetString("nodeElemText", culture);
@@ -312,7 +315,9 @@ namespace WinControlSample
             foreach (TreeNode node in allNodes)
             {
                 if (node.Name == "DB")
+                {
                     node.Text = nodeDBText;
+                }
                 else if (node.Name.StartsWith("Group"))
                 {
                     node.Text = nodeGroupText + " " + cntr1;
@@ -349,8 +354,7 @@ namespace WinControlSample
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            bool cancel;
-            winControl.CloseAllForms(out cancel);
+            winControl.CloseAllForms(out bool cancel);
 
             if (cancel)
                 e.Cancel = true;
@@ -374,10 +378,12 @@ namespace WinControlSample
                     // collapses or expands tree node
                     // свернуть или развернуть узел дерева
                     if (selNode.Nodes.Count > 0)
+                    {
                         if (selNode.IsExpanded)
                             selNode.Collapse(true);
                         else
                             selNode.Expand();
+                    }
                 }
                 else
                 {
@@ -391,6 +397,7 @@ namespace WinControlSample
         private void treeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
         {
             TreeNode node = e.Node;
+
             if (node == nodDB)
                 Connect(false);
             else if (node == nodGroup1 || node == nodGroup2)
@@ -400,6 +407,7 @@ namespace WinControlSample
         private void treeView_BeforeCollapse(object sender, TreeViewCancelEventArgs e)
         {
             TreeNode node = e.Node;
+
             if (node == nodGroup1 || node == nodGroup2)
                 node.ImageKey = node.SelectedImageKey = "folder_closed.gif";
         }
@@ -412,8 +420,8 @@ namespace WinControlSample
 
         private void miDisconnect_Click(object sender, EventArgs e)
         {
-            bool cancel;
-            winControl.CloseAllForms(out cancel);
+            winControl.CloseAllForms(out bool cancel);
+
             if (!cancel)
                 Disconnect();
         }
@@ -452,11 +460,10 @@ namespace WinControlSample
 
         private void miWindowCloseActive_Click(object sender, EventArgs e)
         {
-            Form form = winControl.ActiveForm as Form;
-            if (form != null)
+            if (winControl.ActiveForm is Form form)
             {
-                bool cancel;
-                winControl.CloseForm(form, out cancel);
+                winControl.CloseForm(form, out bool cancel);
+
                 if (!cancel)
                     SetWindowItemsEnabled();
             }
@@ -464,16 +471,15 @@ namespace WinControlSample
 
         private void miWindowCloseAll_Click(object sender, EventArgs e)
         {
-            bool cancel;
-            winControl.CloseAllForms(out cancel);
+            winControl.CloseAllForms(out bool cancel);
+
             if (!cancel)
                 SetWindowItemsEnabled();
         }
 
         private void miWindowCloseAllButActive_Click(object sender, EventArgs e)
         {
-            bool cancel;
-            winControl.CloseAllButActive(out cancel);
+            winControl.CloseAllButActive(out _);
         }
 
         private void miWindowPrevious_Click(object sender, EventArgs e)
@@ -488,7 +494,7 @@ namespace WinControlSample
 
         private void miHelpAbout_Click(object sender, EventArgs e)
         {
-            FrmAbout frmAbout = new FrmAbout();
+            FrmAbout frmAbout = new();
             frmAbout.ShowDialog(this);
         }
 
