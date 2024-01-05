@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WinControls</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Version>2.2.0</Version>
     <Authors>Mikhail Shiryaev</Authors>
     <Company />

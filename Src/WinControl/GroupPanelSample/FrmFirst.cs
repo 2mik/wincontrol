@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using WinControl;
+using WinControls;
 
 namespace GroupPanelSample
 {

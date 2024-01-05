@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            groupPanel1 = new WinControl.GroupPanel();
+            groupPanel1 = new WinControls.GroupPanel();
             btnApply = new System.Windows.Forms.Button();
             textBox6 = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             label2 = new System.Windows.Forms.Label();
             textBox1 = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
-            groupPanel2 = new WinControl.GroupPanel();
+            groupPanel2 = new WinControls.GroupPanel();
             comboBox3 = new System.Windows.Forms.ComboBox();
             label9 = new System.Windows.Forms.Label();
             comboBox2 = new System.Windows.Forms.ComboBox();
@@ -324,8 +324,8 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private WinControl.GroupPanel groupPanel1;
-        private WinControl.GroupPanel groupPanel2;
+        private WinControls.GroupPanel groupPanel1;
+        private WinControls.GroupPanel groupPanel2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
