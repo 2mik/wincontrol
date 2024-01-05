@@ -12,6 +12,7 @@
     <Authors>Mikhail Shiryaev</Authors>
     <Company />
     <PackageProjectUrl></PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright © 2010-2024</Copyright>
     <PackageTags>winforms control manage</PackageTags>
     <Description>A control that manages multiple forms in VS 2008 style.</Description>
@@ -35,4 +36,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
