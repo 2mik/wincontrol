@@ -248,8 +248,7 @@ namespace WinControl
         /// </summary>
         protected virtual void OnTitleClick(EventArgs e)
         {
-            if (TitleClick != null)
-                TitleClick(this, e);
+            TitleClick?.Invoke(this, e);
         }
 
         /// <summary>
@@ -298,7 +297,7 @@ namespace WinControl
             int width = pnlTitle.Width;
             int height = pnlTitle.Height;
 
-            Rectangle rect = new Rectangle(0, 0, width - 1, height - 1);
+            Rectangle rect = new(0, 0, width - 1, height - 1);
             graphics.DrawRectangle(titleFramePen, rect);
 
             rect = new Rectangle(1, 1, width - 2, height - 2);
@@ -317,7 +316,7 @@ namespace WinControl
             int width = pnlContent.Width;
             int height = pnlContent.Height;
 
-            Rectangle rect = new Rectangle(0, -1, width - 1, height);
+            Rectangle rect = new(0, -1, width - 1, height);
             graphics.DrawRectangle(contentFramePen, rect);
 
             rect = new Rectangle(1, 0, width - 2, height - 1);

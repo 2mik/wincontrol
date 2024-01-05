@@ -38,7 +38,7 @@ namespace GroupPanelSample
         private void statusStrip_Paint(object sender, PaintEventArgs e)
         {
             Graphics graphics = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(120, 120, 120));
+            Pen pen = new(Color.FromArgb(120, 120, 120));
             graphics.DrawLine(pen, 0, 1, statusStrip.Width, 1);
         }
     }
