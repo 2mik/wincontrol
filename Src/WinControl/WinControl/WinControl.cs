@@ -16,6 +16,7 @@ namespace WinControls
         private readonly List<TabPage> tabPageList; // list of tab pages
         private TabPage selectedTab;                // the selected tab page
         private bool formClosing;                   // indicates that the form is closing on one's own
+        private bool buttonsVisible;                // the state of the buttons panel
 
         #region Objects for painting tabs and border
         private readonly StringFormat messageFormat;
@@ -130,10 +131,11 @@ namespace WinControls
         {
             get
             {
-                return pnlTabsRight.Visible;
+                return buttonsVisible;
             }
             set
             {
+                buttonsVisible = value;
                 pnlTabsRight.Visible = value;
             }
         }
