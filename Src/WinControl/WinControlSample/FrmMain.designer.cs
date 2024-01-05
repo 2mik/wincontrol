@@ -391,7 +391,6 @@
         private System.Windows.Forms.ToolStripMenuItem miExit;
         private System.Windows.Forms.ToolStripMenuItem miHelp;
         private WinControls.WinControl winControl;
-        private System.Windows.Forms.ImageList ilTree;
         private System.Windows.Forms.ToolStripButton btnDisconnect;
         private System.Windows.Forms.ToolStripSeparator sepFirst;
         private System.Windows.Forms.ToolStripButton btnBlue;
@@ -419,6 +418,7 @@
         private System.Windows.Forms.ToolStripMenuItem miWindowCloseAllButActive;
         private System.Windows.Forms.ToolStripMenuItem miWindowPrevious;
         private System.Windows.Forms.ToolStripMenuItem miWindowNext;
+        private System.Windows.Forms.ImageList ilTree;
     }
 }
 
