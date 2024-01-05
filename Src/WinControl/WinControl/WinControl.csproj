@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFrameworks>net6.0-windows;net8.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.1.1</Version>
+    <Version>2.2.0</Version>
     <Authors>Mikhail Shiryaev</Authors>
     <Company />
     <PackageProjectUrl></PackageProjectUrl>
-    <Copyright>Copyright © 2010-2021</Copyright>
+    <Copyright>Copyright © 2010-2024</Copyright>
     <PackageTags>winforms control manage</PackageTags>
     <Description>A control that manages multiple forms in VS 2008 style.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,9 +18,5 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-  </ItemGroup>
 
 </Project>

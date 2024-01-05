@@ -28,87 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clbTabPages = new System.Windows.Forms.CheckedListBox();
-            this.lblQuestion = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnNo = new System.Windows.Forms.Button();
-            this.btnYes = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            clbTabPages = new System.Windows.Forms.CheckedListBox();
+            lblQuestion = new System.Windows.Forms.Label();
+            btnCancel = new System.Windows.Forms.Button();
+            btnNo = new System.Windows.Forms.Button();
+            btnYes = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // clbTabPages
             // 
-            this.clbTabPages.CheckOnClick = true;
-            this.clbTabPages.FormattingEnabled = true;
-            this.clbTabPages.IntegralHeight = false;
-            this.clbTabPages.Location = new System.Drawing.Point(12, 27);
-            this.clbTabPages.Name = "clbTabPages";
-            this.clbTabPages.Size = new System.Drawing.Size(360, 200);
-            this.clbTabPages.TabIndex = 1;
+            clbTabPages.CheckOnClick = true;
+            clbTabPages.FormattingEnabled = true;
+            clbTabPages.IntegralHeight = false;
+            clbTabPages.Location = new System.Drawing.Point(12, 27);
+            clbTabPages.Name = "clbTabPages";
+            clbTabPages.Size = new System.Drawing.Size(360, 200);
+            clbTabPages.TabIndex = 1;
             // 
             // lblQuestion
             // 
-            this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(9, 9);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(202, 15);
-            this.lblQuestion.TabIndex = 0;
-            this.lblQuestion.Text = "Save changes to the following items?";
+            lblQuestion.AutoSize = true;
+            lblQuestion.Location = new System.Drawing.Point(9, 9);
+            lblQuestion.Name = "lblQuestion";
+            lblQuestion.Size = new System.Drawing.Size(202, 15);
+            lblQuestion.TabIndex = 0;
+            lblQuestion.Text = "Save changes to the following items?";
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(297, 243);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            btnCancel.Location = new System.Drawing.Point(297, 243);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(75, 23);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnNo
             // 
-            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnNo.Location = new System.Drawing.Point(216, 243);
-            this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(75, 23);
-            this.btnNo.TabIndex = 3;
-            this.btnNo.Text = "&No";
-            this.btnNo.UseVisualStyleBackColor = true;
-            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
+            btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
+            btnNo.Location = new System.Drawing.Point(216, 243);
+            btnNo.Name = "btnNo";
+            btnNo.Size = new System.Drawing.Size(75, 23);
+            btnNo.TabIndex = 3;
+            btnNo.Text = "&No";
+            btnNo.UseVisualStyleBackColor = true;
+            btnNo.Click += btnNo_Click;
             // 
             // btnYes
             // 
-            this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnYes.Location = new System.Drawing.Point(135, 243);
-            this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(75, 23);
-            this.btnYes.TabIndex = 2;
-            this.btnYes.Text = "&Yes";
-            this.btnYes.UseVisualStyleBackColor = true;
-            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
+            btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            btnYes.Location = new System.Drawing.Point(135, 243);
+            btnYes.Name = "btnYes";
+            btnYes.Size = new System.Drawing.Size(75, 23);
+            btnYes.TabIndex = 2;
+            btnYes.Text = "&Yes";
+            btnYes.UseVisualStyleBackColor = true;
+            btnYes.Click += btnYes_Click;
             // 
             // FrmSaveRequest
             // 
-            this.AcceptButton = this.btnYes;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(384, 278);
-            this.Controls.Add(this.btnYes);
-            this.Controls.Add(this.btnNo);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblQuestion);
-            this.Controls.Add(this.clbTabPages);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FrmSaveRequest";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Save changes";
-            this.Shown += new System.EventHandler(this.FrmSaveRequest_Shown);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnYes;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            CancelButton = btnCancel;
+            ClientSize = new System.Drawing.Size(384, 278);
+            Controls.Add(btnYes);
+            Controls.Add(btnNo);
+            Controls.Add(btnCancel);
+            Controls.Add(lblQuestion);
+            Controls.Add(clbTabPages);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FrmSaveRequest";
+            ShowInTaskbar = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Save changes";
+            Shown += FrmSaveRequest_Shown;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

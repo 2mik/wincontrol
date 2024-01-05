@@ -13,7 +13,7 @@ namespace WinControl
     /// <para>Элемент управления, содержащий набор форм, которые используют общее пространство на экране.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2018-2019, 2021
+    /// Author: Mikhail Shiryaev, 2010, 2018-2019, 2021, 2024
     /// </remarks>
     public partial class WinControl : UserControl
     {
@@ -450,8 +450,7 @@ namespace WinControl
                 {
                     // shows the selected child form
                     // отображение выбранной дочерней формы
-                    if (tabPage.ChildForm != null)
-                        tabPage.ChildForm.Show();
+                    tabPage.ChildForm?.Show();
 
                     // hides the child form that was selected
                     // hiding should occur after showing to decrease flickering
@@ -1008,9 +1007,9 @@ namespace WinControl
             rect.Inflate(-1, -1);
             graphics.DrawRectangle(frameExtPen, rect);
 
-            graphics.DrawLines(frameExtPen, new Point[]{ new Point(2, 0), new Point(width - 3, 0), 
-                new Point(width - 1, 2), new Point(width - 1, height - 3), new Point(width - 3, height - 1), 
-                new Point(2, height - 1), new Point(0, height - 3), new Point(0, 2), new Point(2, 0)});
+            graphics.DrawLines(frameExtPen, new Point[] { new(2, 0), new(width - 3, 0), 
+                new(width - 1, 2), new(width - 1, height - 3), new(width - 3, height - 1), 
+                new(2, height - 1), new(0, height - 3), new(0, 2), new(2, 0) });
 
             // clears border at the selected tab
             // удаление границы с выбранной закладкой
@@ -1068,9 +1067,9 @@ namespace WinControl
             int height = control.Height;
             bool selected = selectedTab != null && selectedTab.TabPanel == sender;
 
-            graphics.DrawLines(selected ? frameExtPen : tabFramePen, new Point[]{ 
-                new Point(0, height - 1), new Point(0, 2), new Point(2, 0), new Point(width - 3, 0), 
-                new Point(width - 1, 2), new Point(width - 1, height - 1) });
+            graphics.DrawLines(selected ? frameExtPen : tabFramePen, new Point[] { 
+                new(0, height - 1), new(0, 2), new(2, 0), new(width - 3, 0), 
+                new(width - 1, 2), new(width - 1, height - 1) });
 
             graphics.DrawLine(Pens.White, 1, 2, 1, height - 1);
             graphics.DrawLine(selected ? Pens.White : tabBackPen, width - 2, 2, width - 2, height - 1);
