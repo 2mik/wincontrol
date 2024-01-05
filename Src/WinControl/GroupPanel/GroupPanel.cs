@@ -11,7 +11,7 @@ namespace WinControl
     /// </summary>
     /// <para>Элемент управления, используемый для группировки наборов элементов.</para>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010
+    /// Author: Mikhail Shiryaev, 2010, 2024
     /// </remarks>
     [Designer(typeof(GroupPanel.Designer))]
     public partial class GroupPanel : UserControl
