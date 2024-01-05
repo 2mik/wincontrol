@@ -1,4 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
 <root>
+  <!--
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -57,54 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-  <data name="miConnect.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="menuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="miConnect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIIAAMbGxoSEhACEhP//////AAAAAP///wAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
         AAAGACwAAAAAEAAQAAAIXQANCBxIcGCBgggNAjiYsECBAA4XJjRQYAABAhAZIqwY4CJGjQQdXuxIQABI
         gRUJFBgpwGRBjhdXYnQZcmTMlicpegyAMyfKnTQ3PmwZ9OVChw4nFpA48WXTp1ADAgA7
 </value>
   </data>
-  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="miConnect.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="miConnect.Text" xml:space="preserve">
     <value>Connect</value>
   </data>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
-  <data name="miDisconnect.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="miDisconnect.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="miDisconnect.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miDisconnect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIIAAMbGxsDAwISEhACEhP//////AAAAAP///yH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
         AAAHACwAAAAAEAAQAAAIXwAPCBxIcKABAAYKGjQgwMDBhAoPGCBQoEBDiAonCqhoEWNBAxU3Fhjg8WPI
         ASQzQgRpMSXBiQVWoiypseLKkhJD2owokGVLlxF9CgD6kSFKoi8ROnTI8yHPggFw8gwIADs=
 </value>
   </data>
-  <data name="miDisconnect.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miDisconnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="miDisconnect.Text" xml:space="preserve">
     <value>Disconnect</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 6</value>
   </data>
-  <data name="miExit.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="miExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="miDB.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miDB.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 20</value>
   </data>
   <data name="miDB.Text" xml:space="preserve">
     <value>&amp;Database</value>
   </data>
-  <data name="miViewBlue.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miViewBlue.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhDwAQAIYAAIvA5jiGt3eerZi6zk2Wwk+Uwk6Em5zL70yBmTp2kZC3zYC54oa21WCl0bbK0a/M
         3tTk74K00qTQ85HB5GKjzDZ+py1+r420y6/X9n+43x5lhyFvmpbH62Sn0lKGnVSczZy+0qvJ216ZvJXJ
@@ -118,13 +180,13 @@
         lWBAADs=
 </value>
   </data>
-  <data name="miViewBlue.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewBlue.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="miViewBlue.Text" xml:space="preserve">
     <value>Blue</value>
   </data>
-  <data name="miViewGreen.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miViewGreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhDwAQAIYAAHG3OJWtd4LCTcv2r7HOmL/vnd7u08fYt8PxpXSZTLnrlrPkkargg6fSgmeROoq8
         XqzNkKnigMHbq6TdesbXtWunNr3vnHKqP1eJIYjNVKTheXi6QnG3N8r1r1OHHq7kiWivLZvVa7Hmi5TR
@@ -138,13 +200,13 @@
         lWBAADs=
 </value>
   </data>
-  <data name="miViewGreen.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewGreen.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="miViewGreen.Text" xml:space="preserve">
     <value>Green</value>
   </data>
-  <data name="miViewGray.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miViewGray.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhDwAQAIUAAIWFhbu7u2lpab29vba2tqCgoKampp2dnYCAgLCwsGVlZcXFxaioqKqqqmFhYaWl
         pXh4eG1tbX9/f9ra2p6enoaGhmxsbHZ2dmBgYGNjY1NTU0tLS5mZmWRkZIeHh2hoaNnZ2YuLi46OjoiI
@@ -154,134 +216,134 @@
         HABgYYPBBx5eFGgRAkIGBQYHlJBQAcEFARoAHESAQcAHByRYROzgYoVShVizat1KMCAAOw==
 </value>
   </data>
-  <data name="miViewGray.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewGray.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="miViewGray.Text" xml:space="preserve">
     <value>Gray</value>
   </data>
-  <data name="miViewSep.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 6</value>
   </data>
-  <data name="miViewEnglish.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miViewEnglish.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIIAAAAA//8AAAAAAP///////wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
         AAAEACwAAAAAEAAQAAAITAAJCBxIsKDBgwQFKFzIsKFCAAMgShxAseIAhREzQgzAsWOAhxozWqSIceJG
         jxxBmhxJUgDKlx0xspypECZMmTNHOtzJEKHPn0B/BgQAOw==
 </value>
   </data>
-  <data name="miViewEnglish.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="miViewEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="miViewRussian.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miViewRussian.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIIAAP////8AAAAA/wAAAP///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
         AAAEACwAAAAAEAAQAAAIRgAJCBxIsKDBgwQHKFzIsKFCABAjSpT4cKJFiBUvTlQooKPHjx85ghzZUSRJ
         kAoDqFzJkmXKljBVvozZ0qFNhghz6typMyAAOw==
 </value>
   </data>
-  <data name="miViewRussian.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miViewRussian.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="miViewRussian.Text" xml:space="preserve">
     <value>Russian</value>
   </data>
-  <data name="miView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miView.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="miView.Text" xml:space="preserve">
     <value>&amp;View</value>
   </data>
-  <data name="miWindowCloseActive.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="miWindowCloseActive.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="miWindowCloseActive.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+F4</value>
   </data>
-  <data name="miWindowCloseActive.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 22</value>
+  <data name="miWindowCloseActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="miWindowCloseActive.Text" xml:space="preserve">
     <value>Close Active</value>
   </data>
-  <data name="miWindowCloseAll.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="miWindowCloseAll.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="miWindowCloseAll.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 22</value>
+  <data name="miWindowCloseAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="miWindowCloseAll.Text" xml:space="preserve">
     <value>Close All</value>
   </data>
-  <data name="miWindowCloseAllButActive.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="miWindowCloseAllButActive.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="miWindowCloseAllButActive.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 22</value>
+  <data name="miWindowCloseAllButActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="miWindowCloseAllButActive.Text" xml:space="preserve">
     <value>Close All But Active</value>
   </data>
   <data name="miWindowPrevious.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+SHIFT+Tab</value>
+    <value>Ctrl+Shift+Tab</value>
   </data>
-  <data name="miWindowPrevious.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 22</value>
+  <data name="miWindowPrevious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="miWindowPrevious.Text" xml:space="preserve">
     <value>Previous</value>
   </data>
-  <data name="miWindowPrevious.Visible" type="System.Boolean, System.Private.CoreLib">
+  <data name="miWindowPrevious.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="miWindowNext.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Tab</value>
   </data>
-  <data name="miWindowNext.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 22</value>
+  <data name="miWindowNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="miWindowNext.Text" xml:space="preserve">
     <value>Next</value>
   </data>
-  <data name="miWindowNext.Visible" type="System.Boolean, System.Private.CoreLib">
+  <data name="miWindowNext.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="miWindow.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miWindow.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 20</value>
   </data>
   <data name="miWindow.Text" xml:space="preserve">
     <value>&amp;Window</value>
   </data>
-  <data name="miHelpAbout.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miHelpAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIEAAICAgAAAAP///////yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAADACwAAAAAEAAQ
         AAAIRAAHCBxIsKDBgwgFAlgIIKFCARAFNEQIAGKAABAnGqwoIADHAAkBXPzocMBHkCEtokzZsaTCiy45
         amS50qHImi5zJgwIADs=
 </value>
   </data>
-  <data name="miHelpAbout.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
   </data>
   <data name="miHelpAbout.Text" xml:space="preserve">
     <value>About...</value>
   </data>
-  <data name="miHelp.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="miHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="miHelp.Text" xml:space="preserve">
     <value>&amp;Help</value>
   </data>
-  <data name="menuMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="menuMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="menuMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="menuMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 24</value>
   </data>
-  <data name="menuMain.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="menuMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="menuMain.Text" xml:space="preserve">
@@ -291,7 +353,7 @@
     <value>menuMain</value>
   </data>
   <data name="&gt;&gt;menuMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -299,7 +361,10 @@
   <data name="&gt;&gt;menuMain.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnConnect.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="toolMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>129, 17</value>
+  </metadata>
+  <data name="btnConnect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVDhPpZJBDoAgDAT7eN7Gt9CtrkLFUmASAtHOcEEW
@@ -307,19 +372,19 @@
         K5N+JCpjNTfPyNULs2vI1PP8Y0veQOQABx7Lldyc68EAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnConnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnConnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnConnect.Text" xml:space="preserve">
     <value>Connect</value>
   </data>
-  <data name="btnDisconnect.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="btnDisconnect.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnDisconnect.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDisconnect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVDhPnZNtCoAgDEB3+B3MX17L2mTipuzDB2HR3pOi
@@ -327,19 +392,19 @@
         S5JI9qXt3CPJAA+qnSvy9n3bI6T0cxy01t5lAPgA487S0HsQ7AwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnDisconnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnDisconnect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnDisconnect.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnDisconnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnDisconnect.Text" xml:space="preserve">
     <value>Disconnect</value>
   </data>
-  <data name="sepFirst.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="sepFirst.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="btnBlue.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnBlue.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEySURBVDhP5dDPK4MBGMDx/SW0P8DBZeRAOWMlNyUtaiVR
@@ -350,16 +415,16 @@
         lhBVepHKXoG6QXt5+FPwOE3TmEBFtwWVbur3i/8mheILAHfHLoY2j7QAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnBlue.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnBlue.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnBlue.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnBlue.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnBlue.Text" xml:space="preserve">
     <value>Blue</value>
   </data>
-  <data name="btnGreen.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVDhP5dDNK8MBGMDx/SXkD3BwGTlQzlihhJIWkV2M
@@ -370,16 +435,16 @@
         L6D2F9Im5lNnzqXVUCwNfwrFfGjM5VSP5tAyLf/94r9JJvsAZCrDOYYJas4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnGreen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnGreen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnGreen.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnGreen.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnGreen.Text" xml:space="preserve">
     <value>Green</value>
   </data>
-  <data name="btnGray.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGray.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD4SURBVDhP5ZE7ioRAFEXdXmNmIxi2qKCgQSdiIGjgD0QD
@@ -389,19 +454,19 @@
         4fF4UEFVVYiiCI7jIAjCtfgF+S5ZlnG73cDz/O+J/waG+QBEtLhOhmqbyQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnGray.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnGray.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnGray.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnGray.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnGray.Text" xml:space="preserve">
     <value>Gray</value>
   </data>
-  <data name="sepSecond.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="sepSecond.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="btnEnglish.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEnglish.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVDhP1YwxDgAgCAP5/6cxhVgG7QKLXlIrCZw9gQ+D
@@ -409,54 +474,54 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="btnEnglish.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnEnglish.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnEnglish.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="btnRussian.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRussian.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVDhPYxgU4D+FmOE/uWAQGQAygzw8aAxAEyUaDyID
         KMRDGzAwAAAl9YCO2sV9aQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnRussian.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+  <data name="btnRussian.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="btnRussian.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnRussian.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnRussian.Text" xml:space="preserve">
     <value>Russian</value>
   </data>
-  <data name="sepThird.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="sepThird.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="btnAbout.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIEAAICAgAAAAP///////yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAADACwAAAAAEAAQ
         AAAIRAAHCBxIsKDBgwgFAlgIIKFCARAFNEQIAGKAABAnGqwoIADHAAkBXPzocMBHkCEtokzZsaTCiy45
         amS50qHImi5zJgwIADs=
 </value>
   </data>
-  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
   <data name="btnAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="toolMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="toolMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
-  <data name="toolMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="toolMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 25</value>
   </data>
-  <data name="toolMain.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="toolMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="toolMain.Text" xml:space="preserve">
@@ -466,7 +531,7 @@
     <value>toolMain</value>
   </data>
   <data name="&gt;&gt;toolMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -474,32 +539,35 @@
   <data name="&gt;&gt;toolMain.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblStatusText.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>227, 17</value>
+  <metadata name="statusMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>231, 17</value>
+  </metadata>
+  <data name="lblStatusText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
   </data>
   <data name="lblStatusText.Text" xml:space="preserve">
     <value>View on GitHub</value>
   </data>
-  <data name="lblStatusLink.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>168, 17</value>
+  <data name="lblStatusLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 17</value>
   </data>
   <data name="lblStatusLink.Text" xml:space="preserve">
     <value>https://github.com/2mik/wincontrol</value>
   </data>
-  <data name="statusMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="statusMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 394</value>
   </data>
-  <data name="statusMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="statusMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
-  <data name="statusMain.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="statusMain.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;statusMain.Name" xml:space="preserve">
     <value>statusMain</value>
   </data>
   <data name="&gt;&gt;statusMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -513,95 +581,98 @@
   <data name="treeView.ImageKey" xml:space="preserve">
     <value>table.gif</value>
   </data>
+  <metadata name="ilTree.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 17</value>
+  </metadata>
   <data name="ilTree.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj01LjAuNC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAY
-        DwAAAk1TRnQBSQFMAgEBBwEAATgBBAE4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
-        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
-        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
-        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
-        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
-        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
-        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
-        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
-        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
-        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
-        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
-        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
-        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
-        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
-        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
-        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
-        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
-        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
-        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
-        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
-        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
-        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
-        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
-        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
-        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
-        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
-        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
-        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
-        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/xwAAfQ+AAH0AaYB9CQA
-        AfcNZgoAAfQBrQG0AaYB9CMAAfcBvAMHAe8BtQLvArUC9wFmCAACkQG0AdwB2wG0AaYB9AUABwcWAAH3
-        A/8BBwL0ARkB7wEZAd0BCQH3AWYIAAGRAQAB9AG0AdwB2wG0AaYB9AQAB+wWAAH3A/8BBwH/AvQBtQIZ
-        Ad0BtQFmCAABkQIAAfQBtAHcAa0B9AUAB/8WAAH3AfACvAQHAe8BtQLvAbUBZgQAARsDAAGRAwAB8wG0
-        AfQGAAH/AfkB/wMAAf8WAAG1A/8BvAP/AQcB9AIZAe8BZgMAARsBKgEbAgABkQIAAf8BggHzBwAH/xYA
-        Ae8D/wG8A/8BBwL0ARkB7wFmAgABGwEqAVkBKgEbAQABkQEAAf8BqgGwAYIB/wYAB/8WAAG1AfEFvAQH
-        Ae8BtQFmAQABGwEqA1kBKgORAbAC2AGwAYIB/wUAAf8FAAH/FgABuwP/AbwD/wEHAv8B9AHvAWYBAAEx
-        AZoCegJZASoBGwEAAf8BsALYAbABggH/BAAB/wEAA9QBAAH/FgABuwP/AbwD/wG8A/8BBwFmAQABGwEx
-        AZoCegJZASoBGwEAAf8BsAHYAbAB/wUAAf8BAAPUAQAB/xYABNYB1QO0Bq0CAAEbATEBmgJ6AlkBKgEb
-        AQAB/wGwAf8GAAH/BQAB/xYAAdYBCQXcAdYF1QGtAwABGwExAZoCegExARsDAAH/BwAH/xYABdYC1QO0
-        AbMDrQQAARsBMQGaATEBGzwAARsBMQEbaQABGwEcAnMDSwFzARoHAAHzAe8B7QHsA+sB7QHxJwABcwF5
-        AZoBoAF6AVkCMQFLBwAB7QHvAfAB8wHyAQcB7wHtAewHAAHsAXMB6wFtAeoBEgETARUBEQEQAQ8CDgMA
-        AnMB7ALrAW0C6gESAhMCFAMAAXMBWQKgAXoBWQEyATEBSwcAAe0B8QLzAfEBBwHvAfcBbQcAAXMBHAF5
-        CXQBRAEHAgAB7AZSBVEBFAMAAXMBWQGaAaABegFZATIBMQFLAXMDSwFzARoBAAHtAfAB8gHzAfEBBwHv
-        AfcBbQLsAusB7QHxAQAB7AF5ARwDegNZAVMBUgExAUsBbQIAAewBeQRZATgEMgFRARMDAAF0AVkBmgGg
-        AXoBWQEyATEBSwGgAXoBWQIxAUsBAAHtAfAB8gHzAfEBBwHvAfcBbQHzAfIBBwHvAe0B7AEAAewBegEc
-        AZkEegNZAVMBMQFEAfEBAAHsAXkCegNZATgDMgFRARMDAAF0AVkBmgGgAXoBWQEyATEBSwGgAXoBWQEy
-        ATEBSwEAAZIB8AHyAfMB8QEHAe8B9wFtAfMB8QEHAe8B9wFtAQAB7QGaAXkBHAGaBHoDWQFTAUsBcwEA
-        Ae0BmgN6BFkBOAEyAVEBEgMAAXQBWQGaAaABegFZATIBMQFLAaABegFZATIBMQFLAQABkgHwAfIB8wHx
-        AQcB7wH3AesB8wHxAQcB7wH3AW0BAAHtApoBHAGZBnoCWQFSAW0B8gHtApoDegRZATgBUgESAwABdAFZ
-        AZoBoAF6AVkBMgExAUsBoAF6AVkBMgExAUsBAAH3AfAB8gHzAfEBBwHvAfcB6wHzAfEBBwHvAfcBbQEA
-        ARwBmgGgAZkBHAaaA3oBdAIcAqABmgN6BFkBUgHqAwABdAFZAZoBoAF6AVkBMgExAUsBoAF6AVkBMgEx
-        AUsBAAH3AfAB8gHzAfABBwHvAfcB6wHzAfEBBwHvAfcBbQEAARwBmgKgBxwCcwLsAXMBHATDAqABegNZ
-        AVIBbQMAAXQBegOgAZoBegFZAUsBoAF6AVkBMgExAUsBAAHvAfED8wHyAfEBBwHsAfMB8QEHAe8B9wHr
-        AQABHASgB3oBcwMABxwEoAFSAW0DAAEcAZoFwwGaAXMBoAF6AVkBMgExAUsBAAHvAfEF9AHxAe0B8wHx
-        AQcB7wH3AesBAAEcBaABegIcAe0BcwHsAXMDAAEcA5oCegMcAe0BcwHsAXMDAAEbAZkCdAJzAnQBmQGg
-        AXoBWQEyATEBSwEAAfIBBwHvAfcCkgH3Ae8BvAHzAfEBBwHvAfcB6wEAARwBmQSgARwBvAgAARwBGgSg
-        ARwBGw4AAXQBegOgAZoBegFZAUsHAAHvAfED8wHyAfEBBwHsAQAB8gUcAbwJAAEbBRwBGg8AARwBmgXD
-        AZoBcwcAAe8B8QX0AfEB7ScAARsBmQJ0AnMBdAEcARoHAAHyAQcB7wH3ApIB9wHvAfEhAAFCAU0BPgcA
-        AT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAD/wHvAv8CAAP/AccC/wIAAYABAQH/AYMB4AEP
-        AgABgAEBAf4BAQHgAQ8CAAGAAQEB/gGAAeABDwIAAYABAQH+AcEB4AEPAgABgAEBAe4B4wHgAQ8CAAGA
-        AQEBxgHHAeABDwIAAYABAQGCAYMB4AEPAgABgAEBAQABAQHgAQ8CAAGAAQEBAAGAAeABDwIAAYABAQEA
-        AUEB4AEPAgABgAEBAYABIwHgAQ8CAAGAAQEBwAF3AeABDwIAAYABAQHgAf8B4AEPAgAC/wHxA/8CAAj/
-        AQABfwEAAX8E/wEAAX8BAAF/AQABBwEAAQcBAAF/AQABfwEAAQMBAAEHAQABAQEAAQEBAAEDAQABBwEA
-        AQEBAAEBAQABAQEAAQcBAAEBAQABAQEAAQEBAAEHAQABAQEAAQEDAAEHAQABAQEAAQEDAAEHAQABAQEA
-        AQEDAAEHAQABAQEAAQEBAAEHAQABBwEAAQEBAAEBAQABBwEAAQcBAAEBAQABAQEAAf8BAAH/AfwBAQH8
-        AgEB/wEBAf8B/AEBAfwBAQT/AfwBAQH8AQEE/ws=
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGA8AAAJNU0Z0AUkBTAIBAQcB
+        AAFAAQQBQAEEARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMAAUADAAEgAwABAQEAAQgG
+        AAEIGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEAAfABygGmAQABMwUAATMB
+        AAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEAAYABfAH/AQACUAH/AQAB
+        kwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFmAwABmQMAAcwCAAEzAwAC
+        MwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZAgABZgHMAgABZgH/AgAB
+        mQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFmAgABzAGZAgACzAIAAcwB
+        /wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEzAQABmQEAATMBAAHMAQAB
+        MwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFmAgABMwFmATMBAAEzAmYB
+        AAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFmAQABMwKZAQABMwGZAcwB
+        AAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEAATMBzAH/AQABMwH/ATMB
+        AAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFmAQABZgEAAWYBAAGZAQAB
+        ZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFmATMBzAEAAWYBMwH/AQAC
+        ZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFmAQABZgKZAQABZgGZAcwB
+        AAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEAAWYB/wIAAWYB/wEzAQAB
+        ZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZAQABmQEAAZkBAAHMAQAB
+        mQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEzAQABmQEzAWYBAAGZAWYB
+        mQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/AQABmQHMAgABmQHMATMB
+        AAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEAAZkBzAFmAQABmQH/AZkB
+        AAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHMAQABzAEAAZkBMwIAAcwC
+        MwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFmATMBAAGZAmYBAAHMAWYB
+        mQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZAQABzAGZAcwBAAHMAZkB
+        /wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/ATMBAAGZAf8BZgEAAcwB
+        /wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHMATMCAAH/AjMBAAH/ATMB
+        ZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJmAQAB/wFmAZkBAAH/AWYB
+        zAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHMAQAB/wGZAf8BAAH/AcwC
+        AAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEAAcwB/wFmAQAC/wGZAQAC
+        /wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEAASEBAAGlAQADXwEAA3cB
+        AAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7Af8BAAGkAqABAAOAAwAB
+        /wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8cAAH0PgAB9AGmAfQkAAH3DWYKAAH0Aa0BtAGmAfQj
+        AAH3AbwDBwHvAbUC7wK1AvcBZggAApEBtAHcAdsBtAGmAfQFAAcHFgAB9wP/AQcC9AEZAe8BGQHdAQkB
+        9wFmCAABkQEAAfQBtAHcAdsBtAGmAfQEAAfsFgAB9wP/AQcB/wL0AbUCGQHdAbUBZggAAZECAAH0AbQB
+        3AGtAfQFAAf/FgAB9wHwArwEBwHvAbUC7wG1AWYEAAEbAwABkQMAAfMBtAH0BgAB/wH5Af8DAAH/FgAB
+        tQP/AbwD/wEHAfQCGQHvAWYDAAEbASoBGwIAAZECAAH/AYIB8wcAB/8WAAHvA/8BvAP/AQcC9AEZAe8B
+        ZgIAARsBKgFZASoBGwEAAZEBAAH/AaoBsAGCAf8GAAf/FgABtQHxBbwEBwHvAbUBZgEAARsBKgNZASoD
+        kQGwAtgBsAGCAf8FAAH/BQAB/xYAAbsD/wG8A/8BBwL/AfQB7wFmAQABMQGaAnoCWQEqARsBAAH/AbAC
+        2AGwAYIB/wQAAf8BAAPUAQAB/xYAAbsD/wG8A/8BvAP/AQcBZgEAARsBMQGaAnoCWQEqARsBAAH/AbAB
+        2AGwAf8FAAH/AQAD1AEAAf8WAATWAdUDtAatAgABGwExAZoCegJZASoBGwEAAf8BsAH/BgAB/wUAAf8W
+        AAHWAQkF3AHWBdUBrQMAARsBMQGaAnoBMQEbAwAB/wcAB/8WAAXWAtUDtAGzA60EAAEbATEBmgExARs8
+        AAEbATEBG2kAARsBHAJzA0sBcwEaBwAB8wHvAe0B7APrAe0B8ScAAXMBeQGaAaABegFZAjEBSwcAAe0B
+        7wHwAfMB8gEHAe8B7QHsBwAB7AFzAesBbQHqARIBEwEVAREBEAEPAg4DAAJzAewC6wFtAuoBEgITAhQD
+        AAFzAVkCoAF6AVkBMgExAUsHAAHtAfEC8wHxAQcB7wH3AW0HAAFzARwBeQl0AUQBBwIAAewGUgVRARQD
+        AAFzAVkBmgGgAXoBWQEyATEBSwFzA0sBcwEaAQAB7QHwAfIB8wHxAQcB7wH3AW0C7ALrAe0B8QEAAewB
+        eQEcA3oDWQFTAVIBMQFLAW0CAAHsAXkEWQE4BDIBUQETAwABdAFZAZoBoAF6AVkBMgExAUsBoAF6AVkC
+        MQFLAQAB7QHwAfIB8wHxAQcB7wH3AW0B8wHyAQcB7wHtAewBAAHsAXoBHAGZBHoDWQFTATEBRAHxAQAB
+        7AF5AnoDWQE4AzIBUQETAwABdAFZAZoBoAF6AVkBMgExAUsBoAF6AVkBMgExAUsBAAGSAfAB8gHzAfEB
+        BwHvAfcBbQHzAfEBBwHvAfcBbQEAAe0BmgF5ARwBmgR6A1kBUwFLAXMBAAHtAZoDegRZATgBMgFRARID
+        AAF0AVkBmgGgAXoBWQEyATEBSwGgAXoBWQEyATEBSwEAAZIB8AHyAfMB8QEHAe8B9wHrAfMB8QEHAe8B
+        9wFtAQAB7QKaARwBmQZ6AlkBUgFtAfIB7QKaA3oEWQE4AVIBEgMAAXQBWQGaAaABegFZATIBMQFLAaAB
+        egFZATIBMQFLAQAB9wHwAfIB8wHxAQcB7wH3AesB8wHxAQcB7wH3AW0BAAEcAZoBoAGZARwGmgN6AXQC
+        HAKgAZoDegRZAVIB6gMAAXQBWQGaAaABegFZATIBMQFLAaABegFZATIBMQFLAQAB9wHwAfIB8wHwAQcB
+        7wH3AesB8wHxAQcB7wH3AW0BAAEcAZoCoAccAnMC7AFzARwEwwKgAXoDWQFSAW0DAAF0AXoDoAGaAXoB
+        WQFLAaABegFZATIBMQFLAQAB7wHxA/MB8gHxAQcB7AHzAfEBBwHvAfcB6wEAARwEoAd6AXMDAAccBKAB
+        UgFtAwABHAGaBcMBmgFzAaABegFZATIBMQFLAQAB7wHxBfQB8QHtAfMB8QEHAe8B9wHrAQABHAWgAXoC
+        HAHtAXMB7AFzAwABHAOaAnoDHAHtAXMB7AFzAwABGwGZAnQCcwJ0AZkBoAF6AVkBMgExAUsBAAHyAQcB
+        7wH3ApIB9wHvAbwB8wHxAQcB7wH3AesBAAEcAZkEoAEcAbwIAAEcARoEoAEcARsOAAF0AXoDoAGaAXoB
+        WQFLBwAB7wHxA/MB8gHxAQcB7AEAAfIFHAG8CQABGwUcARoPAAEcAZoFwwGaAXMHAAHvAfEF9AHxAe0n
+        AAEbAZkCdAJzAXQBHAEaBwAB8gEHAe8B9wKSAfcB7wHxIQABQgFNAT4HAAE+AwABKAMAAUADAAEgAwAB
+        AQEAAQEGAAEBFgAD/wEAA/8B7wL/AgAD/wHHAv8CAAGAAQEB/wGDAeABDwIAAYABAQH+AQEB4AEPAgAB
+        gAEBAf4BgAHgAQ8CAAGAAQEB/gHBAeABDwIAAYABAQHuAeMB4AEPAgABgAEBAcYBxwHgAQ8CAAGAAQEB
+        ggGDAeABDwIAAYABAQEAAQEB4AEPAgABgAEBAQABgAHgAQ8CAAGAAQEBAAFBAeABDwIAAYABAQGAASMB
+        4AEPAgABgAEBAcABdwHgAQ8CAAGAAQEB4AH/AeABDwIAAv8B8QP/AgAI/wEAAX8BAAF/BP8BAAF/AQAB
+        fwEAAQcBAAEHAQABfwEAAX8BAAEDAQABBwEAAQEBAAEBAQABAwEAAQcBAAEBAQABAQEAAQEBAAEHAQAB
+        AQEAAQEBAAEBAQABBwEAAQEBAAEBAwABBwEAAQEBAAEBAwABBwEAAQEBAAEBAwABBwEAAQEBAAEBAQAB
+        BwEAAQcBAAEBAQABAQEAAQcBAAEHAQABAQEAAQEBAAH/AQAB/wH8AQEB/AIBAf8BAQH/AfwBAQH8AQEE
+        /wH8AQEB/AEBBP8L
 </value>
   </data>
-  <data name="treeView.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="treeView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="treeView.SelectedImageKey" xml:space="preserve">
     <value>table.gif</value>
   </data>
-  <data name="treeView.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="treeView.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 345</value>
   </data>
-  <data name="treeView.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="treeView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;treeView.Name" xml:space="preserve">
     <value>treeView</value>
   </data>
   <data name="&gt;&gt;treeView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;treeView.Parent" xml:space="preserve">
     <value>pnlLeft</value>
@@ -612,23 +683,23 @@
   <data name="pnlLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="pnlLeft.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="pnlLeft.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 49</value>
   </data>
-  <data name="pnlLeft.MinimumSize" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="pnlLeft.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>150, 0</value>
   </data>
-  <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 345</value>
   </data>
-  <data name="pnlLeft.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="pnlLeft.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;pnlLeft.Name" xml:space="preserve">
     <value>pnlLeft</value>
   </data>
   <data name="&gt;&gt;pnlLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pnlLeft.Parent" xml:space="preserve">
     <value>$this</value>
@@ -639,26 +710,26 @@
   <data name="splitterVert.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="splitterVert.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="splitterVert.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 49</value>
   </data>
-  <data name="splitterVert.MinExtra" type="System.Int32, System.Private.CoreLib">
+  <data name="splitterVert.MinExtra" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="splitterVert.MinSize" type="System.Int32, System.Private.CoreLib">
+  <data name="splitterVert.MinSize" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="splitterVert.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="splitterVert.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 345</value>
   </data>
-  <data name="splitterVert.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="splitterVert.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="&gt;&gt;splitterVert.Name" xml:space="preserve">
     <value>splitterVert</value>
   </data>
   <data name="&gt;&gt;splitterVert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitterVert.Parent" xml:space="preserve">
     <value>$this</value>
@@ -669,7 +740,7 @@
   <data name="winControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="winControl.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="winControl.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhRQBYAIYAAPX19fz8/PLy8ubm5vHx8YCAgOXl5c/Pz9XV1dTU1KOjo/39/cvLy9vb2+Pj45aW
         lujo6PDw8IiIiNDQ0JeXl+Tk5ODg4M3NzaWlpY+Pj9zc3LOzs9fX193d3Z+fn9nZ2aCgoM7Ozr+/v9jY
@@ -719,11 +790,11 @@
         yMENNUiA8pfP/OY7//nQj770nY8ACxBgM0PJvva3z32DCCQgADs=
 </value>
   </data>
-  <data name="winControl.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="winControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="winControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="winControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 7, 7, 7</value>
   </data>
   <data name="winControl.MessageText" xml:space="preserve">
@@ -744,17 +815,17 @@
   <data name="winControl.SaveReqYes" xml:space="preserve">
     <value>&amp;Yes</value>
   </data>
-  <data name="winControl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="winControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>389, 345</value>
   </data>
-  <data name="winControl.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="winControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;winControl.Name" xml:space="preserve">
     <value>winControl</value>
   </data>
   <data name="&gt;&gt;winControl.Type" xml:space="preserve">
-    <value>WinControl.WinControl, WinControl, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WinControl.WinControl, WinControl, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;winControl.Parent" xml:space="preserve">
     <value>pnlRight</value>
@@ -765,20 +836,20 @@
   <data name="pnlRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="pnlRight.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+  <data name="pnlRight.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 49</value>
   </data>
-  <data name="pnlRight.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="pnlRight.Size" type="System.Drawing.Size, System.Drawing">
     <value>389, 345</value>
   </data>
-  <data name="pnlRight.TabIndex" type="System.Int32, System.Private.CoreLib">
+  <data name="pnlRight.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="&gt;&gt;pnlRight.Name" xml:space="preserve">
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;pnlRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pnlRight.Parent" xml:space="preserve">
     <value>$this</value>
@@ -786,16 +857,16 @@
   <data name="&gt;&gt;pnlRight.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>592, 416</value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing.Primitives">
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 450</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
@@ -808,210 +879,210 @@
     <value>miDB</value>
   </data>
   <data name="&gt;&gt;miDB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miConnect.Name" xml:space="preserve">
     <value>miConnect</value>
   </data>
   <data name="&gt;&gt;miConnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miDisconnect.Name" xml:space="preserve">
     <value>miDisconnect</value>
   </data>
   <data name="&gt;&gt;miDisconnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miExit.Name" xml:space="preserve">
     <value>miExit</value>
   </data>
   <data name="&gt;&gt;miExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miView.Name" xml:space="preserve">
     <value>miView</value>
   </data>
   <data name="&gt;&gt;miView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewBlue.Name" xml:space="preserve">
     <value>miViewBlue</value>
   </data>
   <data name="&gt;&gt;miViewBlue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewGreen.Name" xml:space="preserve">
     <value>miViewGreen</value>
   </data>
   <data name="&gt;&gt;miViewGreen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewGray.Name" xml:space="preserve">
     <value>miViewGray</value>
   </data>
   <data name="&gt;&gt;miViewGray.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewSep.Name" xml:space="preserve">
     <value>miViewSep</value>
   </data>
   <data name="&gt;&gt;miViewSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewEnglish.Name" xml:space="preserve">
     <value>miViewEnglish</value>
   </data>
   <data name="&gt;&gt;miViewEnglish.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miViewRussian.Name" xml:space="preserve">
     <value>miViewRussian</value>
   </data>
   <data name="&gt;&gt;miViewRussian.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindow.Name" xml:space="preserve">
     <value>miWindow</value>
   </data>
   <data name="&gt;&gt;miWindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindowCloseActive.Name" xml:space="preserve">
     <value>miWindowCloseActive</value>
   </data>
   <data name="&gt;&gt;miWindowCloseActive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindowCloseAll.Name" xml:space="preserve">
     <value>miWindowCloseAll</value>
   </data>
   <data name="&gt;&gt;miWindowCloseAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindowCloseAllButActive.Name" xml:space="preserve">
     <value>miWindowCloseAllButActive</value>
   </data>
   <data name="&gt;&gt;miWindowCloseAllButActive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindowPrevious.Name" xml:space="preserve">
     <value>miWindowPrevious</value>
   </data>
   <data name="&gt;&gt;miWindowPrevious.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miWindowNext.Name" xml:space="preserve">
     <value>miWindowNext</value>
   </data>
   <data name="&gt;&gt;miWindowNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miHelp.Name" xml:space="preserve">
     <value>miHelp</value>
   </data>
   <data name="&gt;&gt;miHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miHelpAbout.Name" xml:space="preserve">
     <value>miHelpAbout</value>
   </data>
   <data name="&gt;&gt;miHelpAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnConnect.Name" xml:space="preserve">
     <value>btnConnect</value>
   </data>
   <data name="&gt;&gt;btnConnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnDisconnect.Name" xml:space="preserve">
     <value>btnDisconnect</value>
   </data>
   <data name="&gt;&gt;btnDisconnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;sepFirst.Name" xml:space="preserve">
     <value>sepFirst</value>
   </data>
   <data name="&gt;&gt;sepFirst.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnBlue.Name" xml:space="preserve">
     <value>btnBlue</value>
   </data>
   <data name="&gt;&gt;btnBlue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnGreen.Name" xml:space="preserve">
     <value>btnGreen</value>
   </data>
   <data name="&gt;&gt;btnGreen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnGray.Name" xml:space="preserve">
     <value>btnGray</value>
   </data>
   <data name="&gt;&gt;btnGray.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;sepSecond.Name" xml:space="preserve">
     <value>sepSecond</value>
   </data>
   <data name="&gt;&gt;sepSecond.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnEnglish.Name" xml:space="preserve">
     <value>btnEnglish</value>
   </data>
   <data name="&gt;&gt;btnEnglish.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnRussian.Name" xml:space="preserve">
     <value>btnRussian</value>
   </data>
   <data name="&gt;&gt;btnRussian.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;sepThird.Name" xml:space="preserve">
     <value>sepThird</value>
   </data>
   <data name="&gt;&gt;sepThird.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
     <value>btnAbout</value>
   </data>
   <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblStatusText.Name" xml:space="preserve">
     <value>lblStatusText</value>
   </data>
   <data name="&gt;&gt;lblStatusText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblStatusLink.Name" xml:space="preserve">
     <value>lblStatusLink</value>
   </data>
   <data name="&gt;&gt;lblStatusLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ilTree.Name" xml:space="preserve">
     <value>ilTree</value>
   </data>
   <data name="&gt;&gt;ilTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
