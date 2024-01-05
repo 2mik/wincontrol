@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace WinControl
+namespace WinControls
 {
     /// <summary>
     /// Page with a tab.

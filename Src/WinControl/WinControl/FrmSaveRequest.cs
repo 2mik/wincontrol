@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace WinControl
+﻿namespace WinControls
 {
     /// <summary>
     /// Represents a form that requests saving.

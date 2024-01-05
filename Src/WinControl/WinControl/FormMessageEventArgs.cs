@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace WinControl
+namespace WinControls
 {
     /// <summary>
     /// Provides data for a form message event.

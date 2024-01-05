@@ -38,7 +38,7 @@
             btnSave = new System.Windows.Forms.ToolStripButton();
             btnSep = new System.Windows.Forms.ToolStripSeparator();
             btnInfo = new System.Windows.Forms.ToolStripButton();
-            winControl = new WinControl.WinControl();
+            winControl = new WinControls.WinControl();
             statusStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             SuspendLayout();
@@ -175,7 +175,7 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip;
-        private WinControl.WinControl winControl;
+        private WinControls.WinControl winControl;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton btnNew;
         private System.Windows.Forms.ToolStripButton btnOpen;

@@ -1,4 +1,4 @@
-﻿namespace WinControl
+﻿namespace WinControls
 {
     /// <summary>
     /// Provides efficient way to control child form by a WinControl control.

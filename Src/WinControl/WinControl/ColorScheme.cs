@@ -1,6 +1,6 @@
 ﻿#pragma warning disable 1591 // Missing XML comment for publicly visible type or member
 
-namespace WinControl
+namespace WinControls
 {
     /// <summary>
     /// Control's color scheme.

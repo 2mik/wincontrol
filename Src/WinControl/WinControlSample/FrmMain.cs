@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Resources;
 using System.Windows.Forms;
-using WinControl;
+using WinControls;
 
 namespace WinControlSample
 {

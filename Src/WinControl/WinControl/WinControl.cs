@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.Design;
-using System.Drawing;
 using System.Drawing.Design;
-using System.Windows.Forms;
 
-namespace WinControl
+namespace WinControls
 {
     /// <summary>
     /// Represents a control that contains multiple forms that share the same space on the screen.
@@ -353,10 +349,13 @@ namespace WinControl
             }
 
             if (width <= pnlWidth)
-                btnTabs.ImageIndex = 0;
+            {
+                btnTabs.Image = Properties.Resources.btn_forms1;
+            }
             else
             {
-                btnTabs.ImageIndex = 1;
+                btnTabs.Image = Properties.Resources.btn_forms2;
+
                 while (i <= controlCnt)
                 {
                     flpnlTabsLeft.Controls[i - 1].Visible = false;

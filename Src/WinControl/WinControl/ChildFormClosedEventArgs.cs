@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace WinControl
+﻿namespace WinControls
 {
     /// <summary>
     /// Provides data for the ChildFormClosed event.

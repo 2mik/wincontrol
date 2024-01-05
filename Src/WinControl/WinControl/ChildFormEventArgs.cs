@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WinControl
+namespace WinControls
 {
     /// <summary>
     /// Provides data for the event related to a child form.

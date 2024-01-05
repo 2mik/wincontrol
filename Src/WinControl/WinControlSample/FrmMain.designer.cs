@@ -71,7 +71,7 @@
             ilTree = new System.Windows.Forms.ImageList(components);
             splitterVert = new System.Windows.Forms.Splitter();
             pnlRight = new System.Windows.Forms.Panel();
-            winControl = new WinControl.WinControl();
+            winControl = new WinControls.WinControl();
             menuMain.SuspendLayout();
             toolMain.SuspendLayout();
             statusMain.SuspendLayout();
@@ -342,7 +342,6 @@
             // 
             // winControl
             // 
-            winControl.ButtonsVisible = false;
             resources.ApplyResources(winControl, "winControl");
             winControl.Image = (System.Drawing.Image)resources.GetObject("winControl.Image");
             winControl.MessageFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -391,7 +390,7 @@
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.ToolStripMenuItem miExit;
         private System.Windows.Forms.ToolStripMenuItem miHelp;
-        private WinControl.WinControl winControl;
+        private WinControls.WinControl winControl;
         private System.Windows.Forms.ImageList ilTree;
         private System.Windows.Forms.ToolStripButton btnDisconnect;
         private System.Windows.Forms.ToolStripSeparator sepFirst;
