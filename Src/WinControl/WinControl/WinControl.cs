@@ -676,7 +676,7 @@ namespace WinControls
             SizeF sizeF = graphics.MeasureString(text, tabSelectedFont);
             graphics.Dispose();
 
-            // creates the tab's panel
+            // creates a tab's panel
             // создание панели закладки
             Panel pnlNewTab = new()
             {
@@ -693,7 +693,7 @@ namespace WinControls
             if (!string.IsNullOrEmpty(hint))
                 toolTip.SetToolTip(pnlNewTab, hint);
 
-            // creates the tab page
+            // creates a tab page
             // создание страницы с закладкой
             TabPage tabPage = new()
             {
@@ -746,7 +746,7 @@ namespace WinControls
             form.FormClosed += Form_FormClosed;
             form.Show();
 
-            // raises the ActiveFormChanged event
+            // raises an ActiveFormChanged event
             // вызов события ActiveFormChanged
             OnActiveFormChanged(EventArgs.Empty);
         }
