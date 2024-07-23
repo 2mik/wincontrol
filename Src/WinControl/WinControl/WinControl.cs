@@ -81,7 +81,7 @@ namespace WinControls
         }
 
         /// <summary>
-        /// Gets the enumerator of forms contained within the control.
+        /// Gets an enumeration of the forms that the control contains.
         /// <para>Получить перечисление форм, которые содержит элемент управления.</para>
         /// </summary>
         public IEnumerable<Form> Forms
