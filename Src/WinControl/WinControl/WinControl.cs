@@ -662,12 +662,6 @@ namespace WinControls
                 return;
             }
 
-            foreach (TabPage tab in tabPageList)
-            {
-                if (tab.ChildForm != null && tab.ChildForm == form)
-                    throw new ArgumentException("The form is duplicated.");
-            }
-
             // hides the child form that was selected
             // сокрытие дочерней формы, которая была выбрана ранее
             if (selectedTab != null && selectedTab.ChildForm != null)
