@@ -81,23 +81,14 @@ namespace WinControls
         }
 
         /// <summary>
-        /// Gets the list of forms contained within the control.
-        /// <para>Получить список форм, которые содержит элемент управления.</para>
+        /// Gets the enumerator of forms contained within the control.
+        /// <para>Получить перечисление форм, которые содержит элемент управления.</para>
         /// </summary>
-        public List<Form> Forms
+        public IEnumerable<Form> Forms
         {
             get
             {
-                List<Form> forms = new(tabPageList.Count);
-
-                foreach (TabPage tabPage in tabPageList)
-                {
-                    Form form = tabPage.ChildForm;
-                    if (form != null)
-                        forms.Add(form);
-                }
-
-                return forms;
+                return tabPageList.Where(t => t.ChildForm != null).Select(t => t.ChildForm);
             }
         }
 
@@ -664,8 +655,13 @@ namespace WinControls
         /// </summary>
         public void AddForm(Form form, string hint, Image image, TreeNode treeNode)
         {
-            // tests the form for duplicating
-            // проверка дублирования формы
+            // activate the form if it is already added
+            if (FindTabPage(form) is TabPage existingTabPage)
+            {
+                SelectTabPage(existingTabPage);
+                return;
+            }
+
             foreach (TabPage tab in tabPageList)
             {
                 if (tab.ChildForm != null && tab.ChildForm == form)
