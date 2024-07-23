@@ -651,10 +651,12 @@ namespace WinControls
 
         /// <summary>
         /// Adds a form to the control.
-        /// <para>Добавить форму.</para>
+        /// <para>Добавить форму в элемент управления.</para>
         /// </summary>
         public void AddForm(Form form, string hint, Image image, TreeNode treeNode)
         {
+            ArgumentNullException.ThrowIfNull(form, nameof(form));
+
             // activate the form if it is already added
             if (FindTabPage(form) is TabPage existingTabPage)
             {
@@ -670,7 +672,7 @@ namespace WinControls
             // measures the form's caption text length
             // измерение длины текста заголовка формы
             Graphics graphics = CreateGraphics();
-            string text = form == null ? "null" : form.Text.Trim();
+            string text = form.Text.Trim();
             SizeF sizeF = graphics.MeasureString(text, tabSelectedFont);
             graphics.Dispose();
 
@@ -719,33 +721,30 @@ namespace WinControls
             flpnlTabsLeft.ResumeLayout(false);
             flpnlTabsLeft.PerformLayout();
 
-            if (form != null)
+            // sets up the form
+            // настройка формы
+            if (form is IChildForm childForm)
             {
-                // sets up the form
-                // настройка формы
-                if (form is IChildForm childForm)
+                childForm.ChildFormTag = new ChildFormTag
                 {
-                    childForm.ChildFormTag = new ChildFormTag
-                    {
-                        TreeNode = treeNode,
-                        TabPanel = pnlNewTab,
-                        ChildForm = form
-                    };
-                    childForm.ChildFormTag.ModifiedChanged += ChildFormTag_ModifiedChanged;
-                    childForm.ChildFormTag.MessageFromChildForm += ChildFormTag_MessageFromChildForm;
-                }
-
-                // shows the form
-                // отображение формы
-                form.TopLevel = false;
-                form.Parent = pnlContent;
-                form.Dock = DockStyle.Fill;
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.TextChanged += Form_TextChanged;
-                form.FormClosing += Form_FormClosing;
-                form.FormClosed += Form_FormClosed;
-                form.Show();
+                    TreeNode = treeNode,
+                    TabPanel = pnlNewTab,
+                    ChildForm = form
+                };
+                childForm.ChildFormTag.ModifiedChanged += ChildFormTag_ModifiedChanged;
+                childForm.ChildFormTag.MessageFromChildForm += ChildFormTag_MessageFromChildForm;
             }
+
+            // shows the form
+            // отображение формы
+            form.TopLevel = false;
+            form.Parent = pnlContent;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TextChanged += Form_TextChanged;
+            form.FormClosing += Form_FormClosing;
+            form.FormClosed += Form_FormClosed;
+            form.Show();
 
             // raises the ActiveFormChanged event
             // вызов события ActiveFormChanged

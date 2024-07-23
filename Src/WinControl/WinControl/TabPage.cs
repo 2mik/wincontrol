@@ -1,33 +1,27 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace WinControls
+﻿namespace WinControls
 {
     /// <summary>
-    /// Page with a tab.
-    /// <para>Страница с закладкой.</para>
+    /// Represents a page with a tab.
+    /// <para>Представляет страницу с закладкой.</para>
     /// </summary>
     /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018
+    /// Author: Mikhail Shiryaev, 2018, 2024
     /// </remarks>
     internal class TabPage
     {
         /// <summary>
-        /// Gets or sets the panel represents the tab page.
-        /// <para>Получить или установить панель, представляющую закладку.</para>
+        /// Gets the panel represents the tab page.
         /// </summary>
-        public Panel TabPanel { get; set; }
+        public Panel TabPanel { get; init; }
 
         /// <summary>
-        /// Gets or sets the child form with the page content.
-        /// <para>Получить или установить дочернюю форму с содержимым страницы.</para>
+        /// Gets the child form with the page content.
         /// </summary>
-        public Form ChildForm { get; set; }
+        public Form ChildForm { get; init; }
 
         /// <summary>
-        /// Gets or sets the page's image.
-        /// <para>Получить или установить пиктограмму страницы.</para>
+        /// Gets the page's icon.
         /// </summary>
-        public Image Image { get; set; }
+        public Image Image { get; init; }
     }
 }
