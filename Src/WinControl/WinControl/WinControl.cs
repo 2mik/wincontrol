@@ -650,8 +650,23 @@ namespace WinControls
 
 
         /// <summary>
-        /// Adds a form to the control.
-        /// <para>Добавить форму в элемент управления.</para>
+        /// Adds the form to the control.
+        /// </summary>
+        public void AddForm(Form form)
+        {
+            if (form is IChildForm childForm && 
+                childForm.ChildFormTag?.Options is ChildFormOptions options)
+            {
+                AddForm(form, options.Hint, options.Image, null);
+            }
+            else
+            {
+                AddForm(form, null, null, null);
+            }
+        }
+
+        /// <summary>
+        /// Adds the form to the control.
         /// </summary>
         public void AddForm(Form form, string hint, Image image, TreeNode treeNode)
         {
@@ -664,20 +679,17 @@ namespace WinControls
                 return;
             }
 
-            // hides the child form that was selected
-            // сокрытие дочерней формы, которая была выбрана ранее
+            // hide the child form that was selected
             if (selectedTab != null && selectedTab.ChildForm != null)
                 selectedTab.ChildForm.Hide();
 
-            // measures the form's caption text length
-            // измерение длины текста заголовка формы
+            // measure the form's caption text length
             Graphics graphics = CreateGraphics();
             string text = form.Text.Trim();
             SizeF sizeF = graphics.MeasureString(text, tabSelectedFont);
             graphics.Dispose();
 
-            // creates a tab's panel
-            // создание панели закладки
+            // creates a panel for a tab page
             Panel pnlNewTab = new()
             {
                 Margin = new Padding(3, 3, 0, 0),
@@ -694,7 +706,6 @@ namespace WinControls
                 toolTip.SetToolTip(pnlNewTab, hint);
 
             // creates a tab page
-            // создание страницы с закладкой
             TabPage tabPage = new()
             {
                 TabPanel = pnlNewTab,
@@ -705,8 +716,7 @@ namespace WinControls
             pnlNewTab.Tag = tabPage;
             selectedTab = tabPage;
 
-            // adds the tab's panel to the control
-            // добавление панели закладки к элементу управления
+            // adds the panel to the control
             Control[] controls = new Control[flpnlTabsLeft.Controls.Count];
             flpnlTabsLeft.Controls.CopyTo(controls, 0);
 
@@ -721,22 +731,19 @@ namespace WinControls
             flpnlTabsLeft.ResumeLayout(false);
             flpnlTabsLeft.PerformLayout();
 
-            // sets up the form
-            // настройка формы
+            // setup the form
             if (form is IChildForm childForm)
             {
-                childForm.ChildFormTag = new ChildFormTag
-                {
-                    TreeNode = treeNode,
-                    TabPanel = pnlNewTab,
-                    ChildForm = form
-                };
-                childForm.ChildFormTag.ModifiedChanged += ChildFormTag_ModifiedChanged;
-                childForm.ChildFormTag.MessageFromChildForm += ChildFormTag_MessageFromChildForm;
+                childForm.ChildFormTag ??= new ChildFormTag();
+                ChildFormTag tag = childForm.ChildFormTag;
+                tag.TreeNode = treeNode;
+                tag.TabPanel = pnlNewTab;
+                tag.ChildForm = form;
+                tag.ModifiedChanged += ChildFormTag_ModifiedChanged;
+                tag.MessageFromChildForm += ChildFormTag_MessageFromChildForm;
             }
 
-            // shows the form
-            // отображение формы
+            // show the form
             form.TopLevel = false;
             form.Parent = pnlContent;
             form.Dock = DockStyle.Fill;
@@ -746,8 +753,7 @@ namespace WinControls
             form.FormClosed += Form_FormClosed;
             form.Show();
 
-            // raises an ActiveFormChanged event
-            // вызов события ActiveFormChanged
+            // raise an ActiveFormChanged event
             OnActiveFormChanged(EventArgs.Empty);
         }
 
@@ -834,13 +840,11 @@ namespace WinControls
             List<IChildForm> savedItems = new();
             foreach (TabPage tabPage in tabPageList)
             {
-                if (tabPage != selectedTab)
+                if (tabPage != selectedTab &&
+                    tabPage.ChildForm is IChildForm childForm &&
+                    childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
                 {
-                    if (tabPage.ChildForm is IChildForm childForm &&
-                        childForm.ChildFormTag != null && childForm.ChildFormTag.Modified)
-                    {
-                        savedItems.Add(childForm);
-                    }
+                    savedItems.Add(childForm);
                 }
             }
 

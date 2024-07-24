@@ -20,7 +20,7 @@
         public Form ChildForm { get; init; }
 
         /// <summary>
-        /// Gets the page's icon.
+        /// Gets the icon for the tab page.
         /// </summary>
         public Image Image { get; init; }
     }

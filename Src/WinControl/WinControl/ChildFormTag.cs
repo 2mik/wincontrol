@@ -20,7 +20,17 @@
             modified = false;
             TreeNode = null;
             TabPanel = null;
-            ModifiedChanged = null;
+            ChildForm = null;
+            Options = null;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the class
+        /// </summary>
+        public ChildFormTag(ChildFormOptions options)
+            : this()
+        {
+            Options = options;
         }
 
 
@@ -57,6 +67,11 @@
         /// Gets or sets the form that contains the tag.
         /// </summary>
         public Form ChildForm { get; set; }
+
+        /// <summary>
+        /// Gets or sets the child form diplay options.
+        /// </summary>
+        public ChildFormOptions Options { get; set; }
 
 
         /// <summary>
