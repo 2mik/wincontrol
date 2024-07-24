@@ -7,7 +7,7 @@
     public interface IChildForm
     {
         /// <summary>
-        /// Получить или установить информацию о контролируемом окне
+        /// Gets or sets the object associated with the form.
         /// </summary>
         ChildFormTag ChildFormTag { get; set; }
 
