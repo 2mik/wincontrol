@@ -1,12 +1,9 @@
 ﻿namespace WinControls
 {
     /// <summary>
-    /// Represents a page with a tab.
-    /// <para>Представляет страницу с закладкой.</para>
+    /// Represents a tab page containing a form.
+    /// <para>Представляет вкладку, содержащую форму.</para>
     /// </summary>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018, 2024
-    /// </remarks>
     internal class TabPage
     {
         /// <summary>

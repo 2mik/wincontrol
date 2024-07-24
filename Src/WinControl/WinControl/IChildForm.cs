@@ -4,9 +4,6 @@
     /// Provides efficient way to control child form by a WinControl control.
     /// <para>Обеспечивает эффективное управление дочерней формой с помощью элемента управления WinControl.</para>
     /// </summary>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2018
-    /// </remarks>
     public interface IChildForm
     {
         /// <summary>

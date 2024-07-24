@@ -3,11 +3,8 @@
 namespace WinControls
 {
     /// <summary>
-    /// Control's color scheme.
-    /// <para>Цветовая схема элемента управления.</para>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010
-    /// </remarks>
+    /// Specifies the control color schemes.
+    /// <para>Задаёт цветовые схемы элемента управления.</para>
     /// </summary>
     public enum ColorScheme
     {

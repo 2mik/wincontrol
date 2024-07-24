@@ -4,9 +4,6 @@
     /// Provides data for the ChildFormClosed event.
     /// <para>Предоставляет данные для события ChildFormClosed.</para>
     /// </summary>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018
-    /// </remarks>
     public class ChildFormClosedEventArgs : FormClosedEventArgs
     {
         /// <summary>

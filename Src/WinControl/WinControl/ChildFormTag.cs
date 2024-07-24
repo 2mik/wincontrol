@@ -4,9 +4,6 @@
     /// Represents an object associated with a child form.
     /// <para>Представляет объект, связанный с дочерней формой.</para>
     /// </summary>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2010, 2018, 2021
-    /// </remarks>
     public class ChildFormTag
     {
         private bool modified; // indicates that the child form data were modified

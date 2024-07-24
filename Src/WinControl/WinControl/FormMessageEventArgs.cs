@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace WinControls
+﻿namespace WinControls
 {
     /// <summary>
     /// Provides data for a form message event.
     /// <para>Предоставляет данные для события сообщения формы.</para>
     /// </summary>
-    /// <remarks>
-    /// Author: Mikhail Shiryaev, 2018-2019, 2021
-    /// </remarks>
     public class FormMessageEventArgs : EventArgs
     {
         /// <summary>
