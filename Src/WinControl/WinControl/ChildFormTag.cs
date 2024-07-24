@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace WinControls
+﻿namespace WinControls
 {
     /// <summary>
     /// Represents an object associated with a child form.
