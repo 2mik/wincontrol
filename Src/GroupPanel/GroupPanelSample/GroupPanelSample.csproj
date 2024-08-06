@@ -8,7 +8,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GroupPanel\GroupPanel.csproj" />
-    <ProjectReference Include="..\WinControl\WinControl.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WinControl">
+      <HintPath>..\..\WinControl\WinControl\bin\Release\net8.0-windows\WinControl.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
