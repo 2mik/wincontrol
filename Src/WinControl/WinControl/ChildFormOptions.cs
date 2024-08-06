@@ -15,5 +15,15 @@
         /// Gets the icon for the tab page.
         /// </summary>
         public Image Image { get; set; } = null;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the child form support the refresh operation.
+        /// </summary>
+        public bool CanRefresh { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the child form support the find operation.
+        /// </summary>
+        public bool CanFind { get; set; } = false;
     }
 }

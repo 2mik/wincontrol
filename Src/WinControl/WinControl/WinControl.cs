@@ -18,7 +18,7 @@ namespace WinControls
         private bool formClosing;                   // indicates that the form is closing on one's own
         private bool buttonsVisible;                // the state of the buttons panel
 
-        #region Objects for painting tabs and border
+        #region Objects for painting tabs and border.
         private readonly StringFormat messageFormat;
         private Font tabFont;
         private Font tabSelectedFont;

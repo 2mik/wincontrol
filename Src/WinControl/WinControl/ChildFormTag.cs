@@ -85,7 +85,6 @@
         protected void OnMessageFromChildForm(FormMessageEventArgs e)
         {
             MessageFromChildForm?.Invoke(this, e);
-            ChildFormMessage?.Invoke(this, e);
         }
 
         /// <summary>
@@ -94,7 +93,6 @@
         protected void OnMessageToChildForm(FormMessageEventArgs e)
         {
             MessageToChildForm?.Invoke(this, e);
-            MainFormMessage?.Invoke(this, e);
         }
 
         /// <summary>
@@ -127,17 +125,5 @@
         /// Occurs when another form sends a message to the child form.
         /// </summary>
         public event EventHandler<FormMessageEventArgs> MessageToChildForm;
-
-        /// <summary>
-        /// Occurs when a child form sends a message.
-        /// </summary>
-        [Obsolete("Use the MessageFromChildForm event.")]
-        public event EventHandler<FormMessageEventArgs> ChildFormMessage;
-
-        /// <summary>
-        /// Occurs when the main form or another child form sends a message.
-        /// </summary>
-        [Obsolete("Use the MessageToChildForm event.")]
-        public event EventHandler<FormMessageEventArgs> MainFormMessage;
     }
 }

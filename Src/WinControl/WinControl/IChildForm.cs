@@ -14,6 +14,16 @@
         /// <summary>
         /// Saves the changes of the child form data.
         /// </summary>
-        void Save();
+        void Save() { }
+
+        /// <summary>
+        /// Refreshes the data displayed by the child form.
+        /// </summary>
+        void Refresh() { }
+
+        /// <summary>
+        /// Opens a find form associated with the child form.
+        /// </summary>
+        void Find() { }
     }
 }
