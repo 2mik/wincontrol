@@ -12,6 +12,11 @@
         public string Hint { get; set; } = "";
 
         /// <summary>
+        /// Gets the optional name of the file that stores the form data.
+        /// </summary>
+        public string FileName { get; set; } = "";
+
+        /// <summary>
         /// Gets the icon for the tab page.
         /// </summary>
         public Image Image { get; set; } = null;
